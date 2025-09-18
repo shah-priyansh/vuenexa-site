@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -603,23 +603,7 @@ body {
     font-weight: 400;
 }
 
-.about-slogan {
-    margin: 2rem 0;
-}
-
-.slogan-text {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #dc2626;
-    font-style: italic;
-    position: relative;
-    padding: 1rem 1.5rem;
-    background: rgba(220, 38, 38, 0.08);
-    border-left: 4px solid #dc2626;
-    border-radius: 12px;
-    display: inline-block;
-    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
-}
+/* Slogan moved to footer */
 
 .about-stats {
     display: grid;
@@ -630,35 +614,25 @@ body {
 .stat-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     position: relative;
-}
-
-.stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: #dc2626;
-    border-radius: 16px 16px 0 0;
+    border-top: 3px solid #dc2626;
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     border-color: #dc2626;
 }
 
 .stat-number {
     font-size: 2.5rem;
-    font-weight: 800;
-    color: #dc2626;
+    font-weight: 700;
+    color: #1e293b;
     margin-bottom: 0.5rem;
     line-height: 1;
 }
@@ -679,43 +653,39 @@ body {
 .feature-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     position: relative;
 }
 
-.feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: #dc2626;
-    border-radius: 16px 16px 0 0;
-}
-
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     border-color: #dc2626;
 }
 
 .feature-icon {
-    width: 60px;
-    height: 60px;
-    background: #dc2626;
+    width: 50px;
+    height: 50px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem auto;
+    color: #dc2626;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    background: #dc2626;
     color: white;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    border-color: #dc2626;
 }
 
 .feature-card h4 {
@@ -922,7 +892,23 @@ body {
 
 .footer-text {
     color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-slogan {
     margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.footer-slogan .slogan-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #dc2626;
+    font-style: italic;
+    padding: 0.5rem 1rem;
+    background: rgba(220, 38, 38, 0.1);
+    border-radius: 8px;
+    display: inline-block;
 }
 
 .footer-links {
