@@ -849,21 +849,29 @@ body {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1.25rem;
     border: 2px solid #e5e7eb;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
     font-family: inherit;
     background: #ffffff;
     color: #374151;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #dc2626;
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
 }
 
 .form-group textarea {
@@ -1299,3 +1307,88 @@ html {
 }
 
 /* Removed complex background animations for cleaner look */
+
+/* Contact Form Status Messages */
+.contact-form .btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.form-status {
+    margin-top: 1.5rem;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+}
+
+.success-message {
+    background: none;
+    color: #10b981;
+    padding: 0.75rem 0;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    animation: slideInUp 0.3s ease-out;
+}
+
+.error-message {
+    background: none;
+    color: #ef4444;
+    padding: 0.75rem 0;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form validation improvements */
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+    border-color: #fca5a5;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.contact-form input:valid,
+.contact-form textarea:valid {
+    border-color: #86efac;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    outline: none;
+}
+
+/* Loading state improvements */
+.contact-form .btn:disabled {
+    background: #9ca3af;
+    border-color: #9ca3af;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.contact-form .btn:disabled:hover {
+    background: #9ca3af;
+    border-color: #9ca3af;
+    transform: none !important;
+    box-shadow: none !important;
+}

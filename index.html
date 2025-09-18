@@ -7,7 +7,7 @@
     <title>VueNexa Technologies - Web & Mobile App Development Services</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -41,7 +41,8 @@
                     Your Software <span class="highlight">Development Partner</span> For Success
                 </h1>
                 <p class="hero-description">
-                    We're a full-service software development agency that transforms ideas into powerful digital solutions. From concept to deployment, we build software that drives business growth.
+                    We're a full-service software development agency that transforms ideas into powerful digital
+                    solutions. From concept to deployment, we build software that drives business growth.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Start Your Project</a>
@@ -168,18 +169,19 @@
         <div class="container">
             <div class="about-header">
                 <h2 class="section-title">About VueNexa Technologies</h2>
-                <p class="section-subtitle">Your trusted software development partner, delivering innovative solutions that transform businesses.</p>
+                <p class="section-subtitle">Your trusted software development partner, delivering innovative solutions
+                    that transform businesses.</p>
             </div>
-            
+
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-description">
-                        We are a leading software development agency with a team of expert developers, 
-                        architects, and digital strategists. We specialize in building custom software 
+                        We are a leading software development agency with a team of expert developers,
+                        architects, and digital strategists. We specialize in building custom software
                         solutions that drive business growth and digital transformation for companies worldwide.
                     </p>
                 </div>
-                
+
                 <div class="about-stats">
                     <div class="stat-card">
                         <div class="stat-number">150+</div>
@@ -195,7 +197,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="about-features">
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -227,7 +229,9 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Technologies We Excel In</h2>
-                <p class="section-subtitle">Our engineers work with the most reliable and in-demand technologies—empowering you with scalable, secure, and modern solutions built for growth and adaptability.</p>
+                <p class="section-subtitle">Our engineers work with the most reliable and in-demand
+                    technologies—empowering you with scalable, secure, and modern solutions built for growth and
+                    adaptability.</p>
             </div>
             <div class="tech-scroll-container">
                 <div class="tech-scroll-wrapper">
@@ -343,7 +347,7 @@
                             <span class="tech-name">Laravel</span>
                         </div>
                     </div>
-                    
+
                     <!-- Second Row -->
                     <div class="tech-row">
                         <div class="tech-card">
@@ -488,20 +492,25 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" id="user_name" name="user_name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" id="user_email" name="user_email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary justify-center flex items-center" id="submit-btn">
+                        <span id="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                        <span id="btn-loading" style="display: none;"><i class="fas fa-spinner fa-spin"></i>
+                            Sending...</span>
+                    </button>
+                    <div id="form-status" class="form-status"></div>
                 </form>
             </div>
         </div>
@@ -512,12 +521,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                <img src="/images/logo-footer.png"
-                    srcset="/images/logo-footer.png 1x, /images/logo-footer@2x.png 2x, /images/logo-footer@3x.png 3x"
-                    alt="VueNexa Logo" class="logo-img" />
+                    <img src="/images/logo-footer.png"
+                        srcset="/images/logo-footer.png 1x, /images/logo-footer@2x.png 2x, /images/logo-footer@3x.png 3x"
+                        alt="VueNexa Logo" class="logo-img" />
                 </div>
                 <p class="footer-text">
-                    Your trusted software development partner, delivering innovative solutions that transform businesses.
+                    Your trusted software development partner, delivering innovative solutions that transform
+                    businesses.
                 </p>
                 <div class="footer-slogan">
                     <span class="slogan-text">We build with care and deliver with pride.</span>
@@ -535,6 +545,84 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/config.js"></script>
+
+    <script>
+        // Contact form handling using EmailJS API
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnLoading = document.getElementById('btn-loading');
+            const formStatus = document.getElementById('form-status');
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            formStatus.innerHTML = '';
+
+            // Get form data
+            const formData = {
+                user_name: document.getElementById('user_name').value,
+                user_email: document.getElementById('user_email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            const serviceId = 'service_9p8kxls';
+            const templateId = 'template_742usr1';
+            const publicKey = 'nIAEUz3F96XdoXi8r';
+
+            // Prepare email data
+            const emailData = {
+                service_id: serviceId,
+                template_id: templateId,
+                user_id: publicKey,
+                template_params: {
+                    user_name: formData.user_name,
+                    user_email: formData.user_email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    reply_to: formData.user_email
+                }
+            };
+
+            // Send email using EmailJS API
+            fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(emailData)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        formStatus.innerHTML = '<div class="success-message">Message sent successfully! We\'ll get back to you soon.</div>';
+                        document.getElementById('contact-form').reset();
+                    } else {
+                        // Get error details
+                        return response.json().then(errorData => {
+                            console.error('EmailJS Error:', errorData);
+                            throw new Error(`Error ${response.status}: ${errorData.message || 'Unknown error'}`);
+                        });
+                    }
+                })
+                .catch(error => {
+                    // Error
+                    console.error('Error:', error);
+                    formStatus.innerHTML = '<div class="error-message">Sorry, there was an error sending your message. Please try again or contact us directly at tech@vuenexa.com</div>';
+                })
+                .finally(function () {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                });
+        });
+    </script>
 </body>
 
 </html>
