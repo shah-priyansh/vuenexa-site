@@ -1447,6 +1447,10 @@ html {
     background: rgba(220, 38, 38, 0.08);
 }
 
+.hero .hero-content {
+    color: #f8fafc;
+}
+
 /* Hero inline stats */
 .hero-stats {
     display: flex;
@@ -1470,7 +1474,7 @@ html {
 
 .hero-stat-label {
     font-size: 0.78rem;
-    color: #64748b;
+    color: #94a3b8;
     margin-top: 3px;
     font-weight: 500;
 }
@@ -1490,7 +1494,6 @@ html {
     padding: 2rem;
     position: relative;
     overflow: hidden;
-    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .textileos-teaser::before {
@@ -1519,11 +1522,11 @@ html {
     height: 8px;
     background: #22c55e;
     border-radius: 50%;
-    animation: pulse 2s infinite;
+    animation: teaser-dot-pulse 2s infinite;
     flex-shrink: 0;
 }
 
-@keyframes pulse {
+@keyframes teaser-dot-pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
 }
@@ -1592,7 +1595,7 @@ html {
 
 .teaser-cta {
     display: inline-block;
-    color: #dc2626;
+    color: #f87171;
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 700;
@@ -1600,5 +1603,5 @@ html {
 }
 
 .teaser-cta:hover {
-    color: #f87171;
+    color: #fca5a5;
 }
