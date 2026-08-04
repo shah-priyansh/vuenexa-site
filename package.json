@@ -1,0 +1,25 @@
+{
+  "name": "vuenexa-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "convert": "node scripts/convert.mjs",
+    "predev": "node scripts/convert.mjs",
+    "prebuild": "node scripts/convert.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}

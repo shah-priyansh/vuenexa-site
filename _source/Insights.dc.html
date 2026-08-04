@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:oklch(0.985 0.004 250); font-family:'Outfit',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:oklch(0.45 0.16 250); text-decoration:none; }
+  a:hover { color:oklch(0.34 0.14 258); }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:100%; overflow-x:hidden; background:oklch(0.985 0.004 250); color:oklch(0.22 0.02 250);">
+  <dc-import name="Site Nav" active="Insights" hint-size="100%,63px"></dc-import>
+
+  <div style="max-width:1240px; margin:0 auto; padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px) 44px; display:flex; flex-direction:column; gap:18px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Insights</div>
+    <h1 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(32px,4.8vw,52px); line-height:1.05; letter-spacing:-0.035em; font-weight:600; max-width:760px; text-wrap:pretty;">Notes from the floor and from the codebase.</h1>
+  </div>
+
+  <div style="max-width:1240px; margin:0 auto; padding:0 40px 88px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;">
+    <a href="Insights.dc.html" style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column; color:inherit;" style-hover="border-color:oklch(0.75 0.05 250);">
+      <div style="height:180px; overflow:hidden;"><div style="box-sizing:border-box; height:100%; background:linear-gradient(160deg, oklch(0.96 0.035 250) 0%, oklch(0.93 0.05 262) 100%); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:14px;">
+          <svg viewBox="0 0 64 64" fill="none" style="position:absolute; right:-14px; top:-18px; width:150px; height:150px; opacity:0.28;"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 250)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 250)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.4 0.16 262)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 250)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 250)"></rect></svg>
+        </div></div>
+      <div style="padding:24px; display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Engineering</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">Getting machine data off the floor without rewiring the factory</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:oklch(0.66 0.015 250);">6 min read</div>
+      </div>
+    </a>
+    <a href="Insights.dc.html" style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column; color:inherit;" style-hover="border-color:oklch(0.75 0.05 250);">
+      <div style="height:180px; overflow:hidden;"><div style="box-sizing:border-box; height:100%; background:linear-gradient(160deg, oklch(0.96 0.035 212) 0%, oklch(0.93 0.05 224) 100%); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:14px;">
+          <svg viewBox="0 0 64 64" fill="none" style="position:absolute; right:-14px; top:-18px; width:150px; height:150px; opacity:0.28;"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 212)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 212)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.4 0.16 224)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 212)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 212)"></rect></svg>
+        </div></div>
+      <div style="padding:24px; display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Operations</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">What a mill owner actually reads in a shift report</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:oklch(0.66 0.015 250);">4 min read</div>
+      </div>
+    </a>
+    <a href="Insights.dc.html" style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column; color:inherit;" style-hover="border-color:oklch(0.75 0.05 250);">
+      <div style="height:180px; overflow:hidden;"><div style="box-sizing:border-box; height:100%; background:linear-gradient(160deg, oklch(0.96 0.035 160) 0%, oklch(0.93 0.05 180) 100%); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:14px;">
+          <svg viewBox="0 0 64 64" fill="none" style="position:absolute; right:-14px; top:-18px; width:150px; height:150px; opacity:0.28;"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 160)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 160)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.4 0.16 180)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 160)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 160)"></rect></svg>
+        </div></div>
+      <div style="padding:24px; display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Practice</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">Why we start every engagement on site</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:oklch(0.66 0.015 250);">3 min read</div>
+      </div>
+    </a>
+  </div>
+
+  <dc-import name="Site Footer" hint-size="100%,320px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

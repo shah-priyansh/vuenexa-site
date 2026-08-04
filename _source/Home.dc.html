@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:oklch(0.985 0.004 250); font-family:'Outfit',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:oklch(0.45 0.16 250); text-decoration:none; }
+  a:hover { color:oklch(0.34 0.14 258); }
+  @keyframes vx-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  @keyframes vx-marquee-rev { from { transform:translateX(-50%); } to { transform:translateX(0); } }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:100%; overflow-x:hidden; background:oklch(0.985 0.004 250); color:oklch(0.22 0.02 250);">
+
+  <dc-import name="Site Nav" hint-size="100%,63px"></dc-import>
+
+  <!-- HERO -->
+  <div style="max-width:1240px; margin:0 auto; padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px) 72px; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:64px; align-items:center;">
+    <div style="display:flex; flex-direction:column; gap:26px;">
+      <div style="display:inline-flex; align-items:center; gap:9px; align-self:flex-start; border:1px solid oklch(0.88 0.02 250); border-radius:999px; padding:6px 14px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.05 250);">
+        <span style="width:7px; height:7px; border-radius:99px; background:oklch(0.66 0.16 148);"></span>
+        Software services &amp; industrial products
+      </div>
+      <h1 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(34px,5.4vw,60px); line-height:1.03; letter-spacing:-0.035em; font-weight:600; text-wrap:pretty;">Engineering teams for companies that make things.</h1>
+      <p style="margin:0; font-size:19px; line-height:1.62; color:oklch(0.44 0.02 250); max-width:520px; text-wrap:pretty;">VueNexa Enterprise builds custom software for firms, and ships its own products for the textile industry — starting with real-time loom and machine monitoring.</p>
+      <div style="display:flex; gap:12px; align-items:center; padding-top:6px;">
+        <a href="Contact.dc.html" style="font-size:15px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; padding:13px 24px; border-radius:9px;" style-hover="background:oklch(0.36 0.15 256);">Start a project</a>
+        <a href="Products.dc.html" style="font-size:15px; font-weight:500; color:oklch(0.28 0.02 250); border:1px solid oklch(0.85 0.008 250); background:oklch(1 0 0); padding:13px 24px; border-radius:9px;" style-hover="border-color:oklch(0.7 0.02 250);">See the product</a>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.06em; color:oklch(0.58 0.015 250); padding-top:10px;">We build with care and deliver with pride.</div>
+    </div>
+    <div style="justify-self:center; width:100%; max-width:328px; box-sizing:border-box; border-radius:40px; background:oklch(0.24 0.02 250); padding:10px; overflow:hidden; box-shadow:0 30px 70px -34px oklch(0.3 0.06 250 / 0.5);">
+      <div style="border-radius:31px; background:oklch(0.975 0.004 250); overflow:hidden; width:100%; max-width:100%; box-sizing:border-box; display:flex; flex-direction:column; font-family:'Outfit',sans-serif;">
+
+        <div style="padding:12px 14px 10px; background:oklch(1 0 0); border-bottom:1px solid oklch(0.93 0.006 250); display:flex; align-items:center; gap:8px; flex:none;">
+          <div style="display:flex; flex-direction:column; gap:3.5px; padding:6px 4px;">
+            <span style="width:15px; height:1.8px; background:oklch(0.4 0.02 250); border-radius:2px;"></span>
+            <span style="width:15px; height:1.8px; background:oklch(0.4 0.02 250); border-radius:2px;"></span>
+            <span style="width:15px; height:1.8px; background:oklch(0.4 0.02 250); border-radius:2px;"></span>
+          </div>
+          <div style="width:26px; height:26px; border-radius:8px; border:1px solid oklch(0.9 0.006 250); display:flex; align-items:center; justify-content:center; color:oklch(0.45 0.02 250); font-size:13px;">‹</div>
+          <div style="font-size:12.5px; font-weight:500; color:oklch(0.3 0.02 250); background:oklch(0.96 0.004 250); border-radius:8px; padding:5px 11px;">Machines</div>
+          <div style="flex:1;"></div>
+          <div style="width:26px; height:26px; display:flex; align-items:center; justify-content:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.02 250)" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+          </div>
+          <div style="display:flex; align-items:center; gap:5px;">
+            <div style="width:26px; height:26px; border-radius:8px; background:oklch(0.85 0.16 92); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:12.5px; font-weight:600; color:oklch(0.28 0.06 80);">N</div>
+            <span style="font-size:10px; color:oklch(0.55 0.02 250);">▾</span>
+          </div>
+        </div>
+
+        <div style="padding:12px; display:flex; flex-direction:column; gap:10px;">
+
+          <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:11px; display:flex; flex-direction:column; gap:7px; flex:none;">
+            <div style="background:oklch(0.95 0.05 160); border-radius:9px; padding:8px 11px; display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.44 0.1 160);">Total mtrs</span>
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.34 0.1 160);">10,531</span>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:7px; flex:none;">
+              <div style="background:oklch(0.96 0.05 155); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.46 0.1 155);">Running</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.36 0.1 155);">29</span>
+              </div>
+              <div style="background:oklch(0.96 0.04 330); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.5 0.13 330);">Low eff</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.42 0.15 330);">16</span>
+              </div>
+              <div style="background:oklch(0.96 0.05 85); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.5 0.11 75);">Poor eff</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.42 0.12 70);">9</span>
+              </div>
+              <div style="background:oklch(0.96 0.04 40); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.52 0.14 35);">Problem</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.44 0.16 32);">1</span>
+              </div>
+              <div style="background:oklch(0.955 0.045 25); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.52 0.16 25);">Fault</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.44 0.18 25);">1</span>
+              </div>
+              <div style="background:oklch(0.95 0.045 250); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.48 0.14 255);">Manual</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.4 0.16 255);">3</span>
+              </div>
+            </div>
+            <div style="background:oklch(0.95 0.04 210); border-radius:9px; padding:8px 11px; display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.46 0.11 215);">Avg eff</span>
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.38 0.13 215);">90%</span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:7px; align-items:center; flex:none;">
+            <div style="flex:1; display:flex; background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:10px; overflow:hidden;">
+              <div style="flex:1; padding:8px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.35 0.03 250); background:oklch(0.96 0.008 250);">Today</div>
+              <div style="flex:1; padding:8px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.6 0.02 250);">24h</div>
+            </div>
+            <div style="width:30px; height:30px; border-radius:9px; border:1px solid oklch(0.93 0.006 250); background:oklch(1 0 0); display:flex; align-items:center; justify-content:center;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.02 250)" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:7px; flex:none;">
+            <div style="background:oklch(0.24 0.02 250); border-radius:10px; padding:9px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.97 0.003 250);">Export all</div>
+            <div style="background:oklch(0.52 0.13 168); border-radius:10px; padding:9px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.99 0.003 250);">TV mode</div>
+          </div>
+
+          <div style="display:flex; gap:7px; overflow:hidden; flex:none;">
+            <div style="display:flex; align-items:center; gap:6px; background:oklch(0.24 0.02 250); border-radius:9px; padding:7px 11px; flex:none;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; color:oklch(0.98 0.003 250);">Line-1</span>
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:600; color:oklch(0.75 0.1 160); background:oklch(0.3 0.03 250); border-radius:5px; padding:1px 5px;">85%</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px; background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:9px; padding:7px 11px; flex:none;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; color:oklch(0.4 0.02 250);">Line-2</span>
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:600; color:oklch(0.48 0.12 160);">96%</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px; background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:9px; padding:7px 11px; flex:none;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; color:oklch(0.4 0.02 250);">Line-3</span>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; flex:none;">
+            <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+              <div style="background:oklch(0.58 0.16 150); padding:6px 9px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#fff;">#1</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 5px;">RUN</span>
+              </div>
+              <div style="padding:9px; display:flex; flex-direction:column; gap:7px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:oklch(0.24 0.02 250); letter-spacing:-0.03em;">168</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+                <div style="background:oklch(0.97 0.004 250); border-radius:7px; padding:6px 8px; display:flex; align-items:center; justify-content:space-between;">
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.42 0.02 250);">168m</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.55 0.02 250);">98%</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+                <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8px; color:oklch(0.55 0.14 25);"><span>STOPS 4</span><span style="color:oklch(0.58 0.02 250);">709</span></div>
+              </div>
+            </div>
+            <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+              <div style="background:oklch(0.72 0.15 78); padding:6px 9px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#fff;">#2</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.24); border-radius:4px; padding:2px 5px;">POOR</span>
+              </div>
+              <div style="padding:9px; display:flex; flex-direction:column; gap:7px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:oklch(0.24 0.02 250); letter-spacing:-0.03em;">241</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:oklch(0.6 0.14 70);">84%</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:84%; height:100%; background:oklch(0.72 0.15 78);"></div></div>
+                <div style="background:oklch(0.97 0.004 250); border-radius:7px; padding:6px 8px; display:flex; align-items:center; justify-content:space-between;">
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.42 0.02 250);">241m</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.55 0.02 250);">84%</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8px; color:oklch(0.58 0.02 250);"><span>PICK 27.5</span><span>THR 95%</span></div>
+                <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8px; color:oklch(0.55 0.14 25);"><span>STOPS 22</span><span style="color:oklch(0.58 0.02 250);">652</span></div>
+              </div>
+            </div>
+            <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+              <div style="background:oklch(0.5 0.17 262); padding:6px 9px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#fff;">#3</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.24); border-radius:4px; padding:2px 5px;">MAN</span>
+              </div>
+              <div style="padding:9px 9px 4px; display:flex; flex-direction:column; gap:7px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:oklch(0.24 0.02 250); letter-spacing:-0.03em;">164</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:oklch(0.5 0.15 262);">98%</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.5 0.17 262);"></div></div>
+              </div>
+            </div>
+            <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+              <div style="background:oklch(0.58 0.16 150); padding:6px 9px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#fff;">#4</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 5px;">RUN</span>
+              </div>
+              <div style="padding:9px 9px 4px; display:flex; flex-direction:column; gap:7px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:oklch(0.24 0.02 250); letter-spacing:-0.03em;">233</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>
+
+  <!-- TWO ARMS -->
+  <div style="border-top:1px solid oklch(0.9 0.006 250); border-bottom:1px solid oklch(0.9 0.006 250); background:oklch(1 0 0);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr;">
+      <div style="padding:clamp(36px,5vw,52px) clamp(24px,4vw,56px) clamp(36px,5vw,52px) 0; display:flex; flex-direction:column; gap:12px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">01 — Services</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:27px; font-weight:600; letter-spacing:-0.025em;">We build software for other firms</div>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:oklch(0.45 0.02 250); max-width:460px;">Long-running engineering teams that take a system from discovery to production and stay with it afterwards.</p>
+      </div>
+      <div style="padding:clamp(36px,5vw,52px) 0 clamp(36px,5vw,52px) clamp(24px,4vw,56px); border-left:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:12px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">02 — Products</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:27px; font-weight:600; letter-spacing:-0.025em;">And our own for the textile floor</div>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:oklch(0.45 0.02 250); max-width:460px;">Machine and loom monitoring built from time spent inside working mills, not from a spec document.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CLIENTS -->
+  <div style="background:oklch(0.985 0.004 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px);">
+      <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:28px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Trusted by</div>
+        <div style="flex:1; height:1px; background:oklch(0.9 0.006 250);"></div>
+        <a href="Work.dc.html" style="font-size:14.5px;">See all clients &rarr;</a>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,auto)); gap:24px 40px; align-items:end; padding:0 2px 34px;">
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:600; letter-spacing:-0.035em; color:oklch(0.24 0.02 250); line-height:1;" data-count="100" data-suffix="+">100+</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Projects delivered</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:600; letter-spacing:-0.035em; color:oklch(0.24 0.02 250); line-height:1;" data-count="50" data-suffix="+">50+</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Working clients</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:600; letter-spacing:-0.035em; color:oklch(0.24 0.02 250); line-height:1;" data-count="5" data-suffix="">5</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Countries</div>
+        </div>
+      </div>
+      <div style="position:relative; overflow:hidden; mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);">
+        <div style="display:flex; width:max-content; animation:vx-marquee 38s linear infinite;">
+          <a href="https://www.scyne.com.au/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=scyne.com.au&amp;sz=128" alt="Scyne Advisory logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Scyne Advisory</span>
+          </a>
+          <a href="https://www.t-mobile.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=t-mobile.com&amp;sz=128" alt="T-Mobile logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">T-Mobile</span>
+          </a>
+          <a href="https://smartsolutions.az/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=smartsolutions.az&amp;sz=128" alt="Smart Solutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Smart Solutions</span>
+          </a>
+          <a href="https://wealthai.tech/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=wealthai.tech&amp;sz=128" alt="WealthAI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">WealthAI</span>
+          </a>
+          <a href="https://www.accentvision.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.accentvision.com/assets/images/logo.png" alt="Accent Vision logo" style="height:28px; width:28px; flex:none; object-fit:contain;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Accent Vision</span>
+          </a>
+          <a href="https://analyticsfoxsoftwares.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=analyticsfoxsoftwares.com&amp;sz=128" alt="Analytics Fox Softwares logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Analytics Fox Softwares</span>
+          </a>
+          <a href="https://digitalevolutions.ae/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=digitalevolutions.ae&amp;sz=128" alt="Digital Evolutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Digital Evolutions</span>
+          </a>
+          <a href="https://www.mauryan.ai/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=mauryan.ai&amp;sz=128" alt="Mauryan AI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Mauryan AI</span>
+          </a>
+          <a href="https://www.scyne.com.au/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=scyne.com.au&amp;sz=128" alt="Scyne Advisory logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Scyne Advisory</span>
+          </a>
+          <a href="https://www.t-mobile.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=t-mobile.com&amp;sz=128" alt="T-Mobile logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">T-Mobile</span>
+          </a>
+          <a href="https://smartsolutions.az/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=smartsolutions.az&amp;sz=128" alt="Smart Solutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Smart Solutions</span>
+          </a>
+          <a href="https://wealthai.tech/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=wealthai.tech&amp;sz=128" alt="WealthAI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">WealthAI</span>
+          </a>
+          <a href="https://www.accentvision.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.accentvision.com/assets/images/logo.png" alt="Accent Vision logo" style="height:28px; width:28px; flex:none; object-fit:contain;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Accent Vision</span>
+          </a>
+          <a href="https://analyticsfoxsoftwares.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=analyticsfoxsoftwares.com&amp;sz=128" alt="Analytics Fox Softwares logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Analytics Fox Softwares</span>
+          </a>
+          <a href="https://digitalevolutions.ae/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=digitalevolutions.ae&amp;sz=128" alt="Digital Evolutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Digital Evolutions</span>
+          </a>
+          <a href="https://www.mauryan.ai/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=mauryan.ai&amp;sz=128" alt="Mauryan AI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Mauryan AI</span>
+          </a>
+        </div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; margin-top:12px; mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);">
+        <div style="display:flex; width:max-content; animation:vx-marquee-rev 46s linear infinite;">
+          <a href="https://www.scyne.com.au/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=scyne.com.au&amp;sz=128" alt="Scyne Advisory logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Scyne Advisory</span>
+          </a>
+          <a href="https://www.t-mobile.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=t-mobile.com&amp;sz=128" alt="T-Mobile logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">T-Mobile</span>
+          </a>
+          <a href="https://smartsolutions.az/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=smartsolutions.az&amp;sz=128" alt="Smart Solutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Smart Solutions</span>
+          </a>
+          <a href="https://wealthai.tech/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=wealthai.tech&amp;sz=128" alt="WealthAI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">WealthAI</span>
+          </a>
+          <a href="https://www.accentvision.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.accentvision.com/assets/images/logo.png" alt="Accent Vision logo" style="height:28px; width:28px; flex:none; object-fit:contain;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Accent Vision</span>
+          </a>
+          <a href="https://analyticsfoxsoftwares.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=analyticsfoxsoftwares.com&amp;sz=128" alt="Analytics Fox Softwares logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Analytics Fox Softwares</span>
+          </a>
+          <a href="https://digitalevolutions.ae/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=digitalevolutions.ae&amp;sz=128" alt="Digital Evolutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Digital Evolutions</span>
+          </a>
+          <a href="https://www.mauryan.ai/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=mauryan.ai&amp;sz=128" alt="Mauryan AI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Mauryan AI</span>
+          </a>
+          <a href="https://www.scyne.com.au/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=scyne.com.au&amp;sz=128" alt="Scyne Advisory logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Scyne Advisory</span>
+          </a>
+          <a href="https://www.t-mobile.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=t-mobile.com&amp;sz=128" alt="T-Mobile logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">T-Mobile</span>
+          </a>
+          <a href="https://smartsolutions.az/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=smartsolutions.az&amp;sz=128" alt="Smart Solutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Smart Solutions</span>
+          </a>
+          <a href="https://wealthai.tech/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=wealthai.tech&amp;sz=128" alt="WealthAI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">WealthAI</span>
+          </a>
+          <a href="https://www.accentvision.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.accentvision.com/assets/images/logo.png" alt="Accent Vision logo" style="height:28px; width:28px; flex:none; object-fit:contain;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Accent Vision</span>
+          </a>
+          <a href="https://analyticsfoxsoftwares.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=analyticsfoxsoftwares.com&amp;sz=128" alt="Analytics Fox Softwares logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Analytics Fox Softwares</span>
+          </a>
+          <a href="https://digitalevolutions.ae/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=digitalevolutions.ae&amp;sz=128" alt="Digital Evolutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Digital Evolutions</span>
+          </a>
+          <a href="https://www.mauryan.ai/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=mauryan.ai&amp;sz=128" alt="Mauryan AI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Mauryan AI</span>
+          </a>
+        </div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:8px; padding-top:26px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.5 0.02 250); border:1px solid oklch(0.9 0.006 250); border-radius:999px; padding:6px 13px;">Advisory</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.5 0.02 250); border:1px solid oklch(0.9 0.006 250); border-radius:999px; padding:6px 13px;">Telecom</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.5 0.02 250); border:1px solid oklch(0.9 0.006 250); border-radius:999px; padding:6px 13px;">Fintech</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.5 0.02 250); border:1px solid oklch(0.9 0.006 250); border-radius:999px; padding:6px 13px;">AI products</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.5 0.02 250); border:1px solid oklch(0.9 0.006 250); border-radius:999px; padding:6px 13px;">Manufacturing</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.5 0.02 250); border:1px solid oklch(0.9 0.006 250); border-radius:999px; padding:6px 13px;">Digital</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.5 0.02 250); border:1px solid oklch(0.9 0.006 250); border-radius:999px; padding:6px 13px;">Analytics</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.5 0.02 250); border:1px solid oklch(0.9 0.006 250); border-radius:999px; padding:6px 13px;">Retail</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES TEASER -->
+  <div style="max-width:1240px; margin:0 auto; padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px);">
+    <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:20px 40px; margin-bottom:40px;">
+      <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(27px,3.4vw,40px); font-weight:600; letter-spacing:-0.03em;">What we take on</h2>
+      <a href="Services.dc.html" style="font-size:15px;">All services &rarr;</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;">
+      <a href="Services.dc.html" style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px; text-decoration:none; color:inherit;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.45 0.16 250);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">Web platforms</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Internal tools, customer portals and admin systems that hold up under daily operational load.</p>
+      </a>
+      <a href="Services.dc.html" style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px; text-decoration:none; color:inherit;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.58 0.15 224);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">Mobile apps</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Android and iOS applications for teams who work away from a desk.</p>
+      </a>
+      <a href="Services.dc.html" style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px; text-decoration:none; color:inherit;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.66 0.12 212);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">IoT &amp; devices</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Sensors, gateways and firmware that get machine data off the floor and into a database.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- PRODUCT TEASER -->
+  <div style="background:oklch(0.21 0.025 250); color:oklch(0.97 0.004 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px); display:flex; flex-direction:column; gap:40px;">
+      <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px 48px;">
+        <div style="display:flex; flex-direction:column; gap:18px; max-width:560px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.72 0.09 220);">VueNexa product</div>
+          <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,3.6vw,42px); font-weight:600; letter-spacing:-0.03em; line-height:1.1; text-wrap:pretty;">Every loom on one screen</h2>
+          <p style="margin:0; font-size:17px; line-height:1.65; color:oklch(0.75 0.012 250);">Live efficiency, stoppages and production for the whole floor, with automatic shift reports and a mobile view for owners who are not in the office.</p>
+        </div>
+        <a href="Products.dc.html" style="font-size:15px; font-weight:500; background:oklch(1 0 0); color:oklch(0.22 0.02 250); padding:13px 24px; border-radius:9px; white-space:nowrap; text-decoration:none;" style-hover="background:oklch(0.9 0.01 250);">See the dashboard</a>
+      </div>
+      <div style="border:1px solid oklch(0.33 0.02 250); border-radius:16px; background:oklch(0.25 0.022 250); padding:10px; overflow:hidden;">
+        <div ref="{{ frame1 }}" style="border-radius:11px; overflow:hidden; min-width:0; max-width:100%; background:oklch(0.975 0.004 250); height:632px;">
+          <div style="width:1600px; transform:scale(0.72); transform-origin:top left; display:flex; font-family:'Outfit',sans-serif;">
+            <div style="width:56px; flex:none; background:oklch(1 0 0); border-right:1px solid oklch(0.93 0.006 250); display:flex; flex-direction:column; align-items:center; gap:20px; padding:20px 0;">
+              <div style="display:flex; flex-direction:column; gap:4px;"><span style="width:16px; height:2px; background:oklch(0.45 0.02 250);"></span><span style="width:16px; height:2px; background:oklch(0.45 0.02 250);"></span><span style="width:16px; height:2px; background:oklch(0.45 0.02 250);"></span></div>
+              <div style="width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 250); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.16 250)" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20h-20"></path></svg></div>
+              <div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; min-width:0;">
+              <div style="padding:14px 20px; background:oklch(1 0 0); border-bottom:1px solid oklch(0.93 0.006 250); display:flex; align-items:center; gap:12px;">
+                <div style="width:30px; height:30px; border-radius:9px; border:1px solid oklch(0.92 0.006 250); display:flex; align-items:center; justify-content:center; color:oklch(0.45 0.02 250);">‹</div>
+                <div style="font-size:14px; font-weight:500; color:oklch(0.3 0.02 250); background:oklch(0.96 0.004 250); border-radius:9px; padding:7px 15px;">Machines</div>
+                <div style="flex:1;"></div>
+                <div style="display:flex; align-items:center; gap:9px;">
+                  <svg width="26" height="26" viewBox="0 0 64 64" fill="none"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect></svg>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">VueNexa</span>
+                </div>
+                <div style="flex:1;"></div>
+                <div style="width:30px; height:30px; border-radius:9px; border:1px solid oklch(0.92 0.006 250); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.02 250)" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path></svg></div>
+                <div style="display:flex; align-items:center; gap:8px; border:1px solid oklch(0.92 0.006 250); border-radius:10px; padding:5px 11px 5px 6px;"><div style="width:28px; height:28px; border-radius:8px; background:oklch(0.85 0.16 92); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:600; color:oklch(0.28 0.06 80);">N</div><div style="display:flex; flex-direction:column;"><span style="font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250);">Niraj</span><span style="font-size:10px; color:oklch(0.58 0.02 250);">Admin</span></div></div>
+              </div>
+              <div style="padding:16px 20px; display:flex; flex-direction:column; gap:16px; background:oklch(0.975 0.004 250);">
+                <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:12px 14px; display:flex; align-items:center; gap:9px; flex-wrap:wrap;">
+                  <div style="background:oklch(0.96 0.05 160); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.38 0.1 160);">Total mtrs</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.38 0.1 160);">10,531</span></div>
+                  <div style="background:oklch(0.96 0.05 155); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.4 0.1 155);">Running</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.4 0.1 155);">29</span></div>
+                  <div style="background:oklch(0.96 0.04 330); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.14 330);">Low eff</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.45 0.14 330);">16</span></div>
+                  <div style="background:oklch(0.96 0.05 85); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.46 0.12 70);">Poor eff</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.46 0.12 70);">9</span></div>
+                  <div style="background:oklch(0.96 0.04 40); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.47 0.15 32);">Problem</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.47 0.15 32);">1</span></div>
+                  <div style="background:oklch(0.955 0.045 25); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.47 0.17 25);">Fault</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.47 0.17 25);">1</span></div>
+                  <div style="background:oklch(0.95 0.045 250); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.43 0.15 255);">Manual</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.43 0.15 255);">3</span></div>
+                  <div style="background:oklch(0.95 0.04 210); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.4 0.12 215);">Avg eff</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.4 0.12 215);">90%</span></div>
+                  <div style="flex:1;"></div>
+                  <div style="display:flex; border:1px solid oklch(0.92 0.006 250); border-radius:10px; overflow:hidden;"><div style="padding:8px 14px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.32 0.03 250); background:oklch(0.97 0.004 250);">Today</div><div style="padding:8px 14px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.6 0.02 250);">24h</div></div>
+                  <div style="background:oklch(0.24 0.02 250); border-radius:10px; padding:9px 15px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#fff;">Export all</div>
+                  <div style="background:oklch(0.52 0.13 168); border-radius:10px; padding:9px 15px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#fff;">TV mode</div>
+                </div>
+                <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:13px;">
+                  <div style="display:flex; align-items:center; gap:12px; padding:0 2px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.24 0.02 250);">Line-1</span><span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.55 0.15 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:2px 7px;">● 2</span><div style="flex:1;"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.5 0.02 250);">● 8 run &nbsp; ● 2 stop</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.5 0.13 80); background:oklch(0.96 0.02 90); border-radius:7px; padding:4px 10px;">EFF 85.0%</span></div>
+                  <div style="display:grid; grid-template-columns:repeat(10,1fr); gap:9px;"><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#1</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">168</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>168m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 4</span><span style="color:oklch(0.58 0.02 250);">∿ 709</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.72 0.15 78); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#2</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">POOR</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">241</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.6 0.14 70);">84%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:84%; height:100%; background:oklch(0.72 0.15 78);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>241m</span><span style="color:oklch(0.55 0.02 250);">84%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 27.5</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 22</span><span style="color:oklch(0.58 0.02 250);">∿ 652</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.5 0.17 262); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#3</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">MAN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">164</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.5 0.15 262);">98%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.5 0.17 262);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>164m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 4</span><span style="color:oklch(0.58 0.02 250);">∿ 0</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#4</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">233</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>233m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 34</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 6</span><span style="color:oklch(0.58 0.02 250);">∿ 694</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#5</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">163</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>163m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 702</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#6</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">204</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>204m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 38</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 648</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#7</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">159</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">95%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:95%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>159m</span><span style="color:oklch(0.55 0.02 250);">95%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 12</span><span style="color:oklch(0.58 0.02 250);">∿ 694</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#8</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">236</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>236m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 34</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 7</span><span style="color:oklch(0.58 0.02 250);">∿ 710</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.35 0.02 250); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#9</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">OFF</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">0</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.55 0.02 250);">0%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:0%; height:100%; background:oklch(0.35 0.02 250);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>0m</span><span style="color:oklch(0.55 0.02 250);">0%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 0</span><span style="color:oklch(0.58 0.02 250);">∿ 0</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.72 0.15 78); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#10</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">POOR</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">135</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.6 0.14 70);">87%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:87%; height:100%; background:oklch(0.72 0.15 78);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>135m</span><span style="color:oklch(0.55 0.02 250);">87%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 14</span><span style="color:oklch(0.58 0.02 250);">∿ 654</span></div>
+  </div></div></div>
+                </div>
+                <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:13px;">
+                  <div style="display:flex; align-items:center; gap:12px; padding:0 2px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.24 0.02 250);">Line-2</span><span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.55 0.15 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:2px 7px;">● 1</span><div style="flex:1;"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.5 0.02 250);">● 10 run &nbsp; ● 1 stop</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.45 0.14 160); background:oklch(0.96 0.02 90); border-radius:7px; padding:4px 10px;">EFF 96.0%</span></div>
+                  <div style="display:grid; grid-template-columns:repeat(10,1fr); gap:9px;"><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#11</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">161</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>161m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 7</span><span style="color:oklch(0.58 0.02 250);">∿ 698</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.72 0.15 78); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#12</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">POOR</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">251</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.6 0.14 70);">88%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:88%; height:100%; background:oklch(0.72 0.15 78);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>251m</span><span style="color:oklch(0.55 0.02 250);">88%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 27.5</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 19</span><span style="color:oklch(0.58 0.02 250);">∿ 654</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#13</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">158</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">95%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:95%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>158m</span><span style="color:oklch(0.55 0.02 250);">95%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 7</span><span style="color:oklch(0.58 0.02 250);">∿ 700</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#14</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">200</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">96%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:96%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>200m</span><span style="color:oklch(0.55 0.02 250);">96%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 38</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 8</span><span style="color:oklch(0.58 0.02 250);">∿ 650</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#15</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">163</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>163m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 696</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#16</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">279</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>279m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 27.5</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 8</span><span style="color:oklch(0.58 0.02 250);">∿ 647</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#17</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">161</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>161m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 698</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#18</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">200</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>200m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 38</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 10</span><span style="color:oklch(0.58 0.02 250);">∿ 647</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#19</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">159</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">95%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:95%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>159m</span><span style="color:oklch(0.55 0.02 250);">95%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 7</span><span style="color:oklch(0.58 0.02 250);">∿ 696</span></div>
+  </div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+  <div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#20</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+  <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">130</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+  <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+  <div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>130m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 59</span><span>THR 95%</span></div>
+  <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 662</span></div>
+  </div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <div id="process" style="max-width:1240px; margin:0 auto; padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px);">
+    <h2 style="margin:0 0 40px; font-family:'Space Grotesk',sans-serif; font-size:clamp(27px,3.4vw,40px); font-weight:600; letter-spacing:-0.03em;">How we work</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:0; border-top:1px solid oklch(0.88 0.008 250);">
+      <div style="padding:28px 28px 28px 0; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.45 0.16 250);">01</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em;">Understand the floor</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">We visit, watch the work and write down where time is actually lost.</p>
+      </div>
+      <div style="padding:28px; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.45 0.16 250);">02</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em;">Scope and estimate</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">A written plan with milestones, costs and what is deliberately out of scope.</p>
+      </div>
+      <div style="padding:28px; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.45 0.16 250);">03</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em;">Build in the open</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Short cycles, working software you can try, and no surprises at handover.</p>
+      </div>
+      <div style="padding:28px 0 28px 28px; display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.45 0.16 250);">04</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em;">Run and support</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Monitoring, fixes and improvements once the system is carrying real work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAGLINE BAND -->
+  <div style="background:oklch(1 0 0); border-top:1px solid oklch(0.9 0.006 250); border-bottom:1px solid oklch(0.9 0.006 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px); display:flex; align-items:center; gap:28px;">
+      <svg width="44" height="44" viewBox="0 0 64 64" fill="none" style="flex:none;">
+        <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+        <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+        <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect>
+        <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+        <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+      </svg>
+      <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(23px,3vw,34px); font-weight:500; letter-spacing:-0.025em; color:oklch(0.26 0.02 250);">We build with care and deliver with pride.</div>
+    </div>
+  </div>
+
+  <!-- INSIGHTS -->
+  <div id="insights" style="max-width:1240px; margin:0 auto; padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px);">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:32px;">
+      <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(27px,3.4vw,40px); font-weight:600; letter-spacing:-0.03em;">Insights</h2>
+      <a href="Insights.dc.html" style="font-size:15px;">All writing →</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;">
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:170px; overflow:hidden;"><div style="box-sizing:border-box; height:100%; background:linear-gradient(160deg, oklch(0.96 0.035 250) 0%, oklch(0.93 0.05 262) 100%); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:14px;">
+          <svg viewBox="0 0 64 64" fill="none" style="position:absolute; right:-14px; top:-18px; width:150px; height:150px; opacity:0.28;"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 250)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 250)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.4 0.16 262)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 250)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 250)"></rect></svg>
+        </div></div>
+        <div style="padding:22px; display:flex; flex-direction:column; gap:9px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Engineering</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">Getting machine data off the floor without rewiring the factory</div>
+        </div>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:170px; overflow:hidden;"><div style="box-sizing:border-box; height:100%; background:linear-gradient(160deg, oklch(0.96 0.035 212) 0%, oklch(0.93 0.05 224) 100%); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:14px;">
+          <svg viewBox="0 0 64 64" fill="none" style="position:absolute; right:-14px; top:-18px; width:150px; height:150px; opacity:0.28;"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 212)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 212)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.4 0.16 224)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 212)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 212)"></rect></svg>
+        </div></div>
+        <div style="padding:22px; display:flex; flex-direction:column; gap:9px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Operations</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">What a mill owner actually reads in a shift report</div>
+        </div>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:170px; overflow:hidden;"><div style="box-sizing:border-box; height:100%; background:linear-gradient(160deg, oklch(0.96 0.035 160) 0%, oklch(0.93 0.05 180) 100%); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:14px;">
+          <svg viewBox="0 0 64 64" fill="none" style="position:absolute; right:-14px; top:-18px; width:150px; height:150px; opacity:0.28;"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 160)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 160)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.4 0.16 180)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.45 0.15 160)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.5 0.14 160)"></rect></svg>
+        </div></div>
+        <div style="padding:22px; display:flex; flex-direction:column; gap:9px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Practice</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">Why we start every engagement on site</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1240px; margin:0 auto; padding:0 40px 88px;">
+    <div style="border:1px solid oklch(0.88 0.02 250); border-radius:20px; background:oklch(1 0 0); padding:40px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:28px 48px;">
+      <div style="display:flex; flex-direction:column; gap:14px; max-width:520px;">
+        <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3vw,34px); font-weight:600; letter-spacing:-0.03em; line-height:1.12; text-wrap:pretty;">Tell us what you are trying to build.</h2>
+        <p style="margin:0; font-size:16.5px; line-height:1.65; color:oklch(0.46 0.02 250);">Send a short note about the problem. We reply with an honest view of whether we are the right team for it.</p>
+      </div>
+      <a href="Contact.dc.html" style="font-size:15px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; padding:14px 26px; border-radius:9px; white-space:nowrap; text-decoration:none;" style-hover="background:oklch(0.36 0.15 256);">Get in touch</a>
+    </div>
+  </div>
+
+  <dc-import name="Site Footer" hint-size="100%,320px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.fit = () => {
+      [this.f1, this.f2].forEach(el => {
+        if (!el) return;
+        const inner = el.firstElementChild;
+        if (!inner) return;
+        const s = el.clientWidth / 1600;
+        inner.style.transform = "scale(" + s + ")";
+        el.style.height = Math.round(inner.scrollHeight * s) + "px";
+      });
+    };
+    this.countUp();
+    this.ro = new ResizeObserver(this.fit);
+    if (this.f1) this.ro.observe(this.f1);
+    if (this.f2) this.ro.observe(this.f2);
+    this.fit();
+  }
+  countUp() {
+    const els = Array.prototype.slice.call(document.querySelectorAll("[data-count]"));
+    if (!els.length || !window.IntersectionObserver) return;
+    const run = el => {
+      const target = parseFloat(el.getAttribute("data-count"));
+      const suffix = el.getAttribute("data-suffix") || "";
+      const dur = 1100, t0 = performance.now();
+      el.textContent = "0" + suffix;
+      const step = now => {
+        const p = Math.min(1, (now - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * e) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    this.io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) { run(en.target); this.io.unobserve(en.target); }
+      });
+    }, { threshold: 0.6 });
+    els.forEach(el => this.io.observe(el));
+  }
+  componentWillUnmount() { if (this.ro) this.ro.disconnect(); if (this.io) this.io.disconnect(); }
+  renderVals() {
+    return {
+      frame1: el => { this.f1 = el; if (this.fit) this.fit(); },
+      frame2: el => { this.f2 = el; if (this.fit) this.fit(); }
+    };
+  }
+}
+</script>
+</body>
+</html>

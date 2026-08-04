@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:oklch(0.95 0.004 250); font-family:'Outfit',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:oklch(0.52 0.14 250); text-decoration:none; }
+  a:hover { color:oklch(0.42 0.15 268); text-decoration:underline; }
+</style>
+</helmet>
+
+<section style="padding:72px 64px 96px; display:flex; flex-direction:column; gap:40px;">
+
+  <div style="display:flex; align-items:baseline; gap:16px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.55 0.01 250);">
+    <span>Turn 1</span>
+    <span style="width:40px; height:1px; background:oklch(0.82 0.008 250);"></span>
+    <span>VueNexa Enterprise — identity directions</span>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start;">
+
+    <!-- ============ OPTION 1a ============ -->
+    <div id="1a" style="width:620px; box-sizing:border-box; display:flex; flex-direction:column; gap:20px; background:oklch(0.99 0.003 250); border:1px solid oklch(0.89 0.006 250); border-radius:20px; padding:32px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; background:oklch(0.52 0.14 250); color:#fff; padding:4px 9px; border-radius:6px;">1a</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; color:oklch(0.24 0.02 250);">Warp</span>
+        <span style="font-size:14px; color:oklch(0.55 0.01 250); text-wrap:pretty;">Five threads on a loom, falling into a V. Reads as a bar chart at a glance.</span>
+      </div>
+
+      <!-- primary lockup -->
+      <div style="background:oklch(0.985 0.004 250); border-radius:14px; padding:56px 40px; display:flex; align-items:center; justify-content:center; gap:24px;">
+        <svg width="86" height="86" viewBox="0 0 64 64" fill="none" aria-label="VueNexa Enterprise mark">
+          <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+          <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+          <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect>
+          <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+          <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+        </svg>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div style="display:flex; align-items:baseline; gap:12px;"><div style="font-family:'Space Grotesk',sans-serif; font-size:54px; font-weight:600; letter-spacing:-0.035em; color:oklch(0.22 0.02 250); line-height:0.95;">VueNexa</div><div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:400; letter-spacing:0.22em; text-transform:uppercase; color:oklch(0.45 0.16 250);">Enterprise</div></div>
+          <sc-if value="{{ showTagline }}" hint-placeholder-val="{{ true }}">
+            <div style="font-family:'Outfit',sans-serif; font-size:13.5px; font-weight:400; letter-spacing:0.02em; color:oklch(0.52 0.03 250);">We build with care and deliver with pride.</div>
+          </sc-if>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <!-- stacked -->
+        <div style="background:oklch(0.985 0.004 250); border-radius:14px; padding:32px 20px; display:flex; flex-direction:column; align-items:center; gap:16px;">
+          <svg width="52" height="52" viewBox="0 0 64 64" fill="none">
+            <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+            <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+            <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect>
+            <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+            <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+          </svg>
+          <div style="display:flex; align-items:baseline; gap:8px;"><div style="font-family:'Space Grotesk',sans-serif; font-size:27px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.22 0.02 250);">VueNexa</div><div style="font-family:'Space Grotesk',sans-serif; font-size:9px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:oklch(0.45 0.16 250);">Enterprise</div></div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.62 0.01 250);">Stacked</div>
+        </div>
+        <!-- app icons -->
+        <div style="background:oklch(0.985 0.004 250); border-radius:14px; padding:32px 20px; display:flex; flex-direction:column; align-items:center; gap:16px;">
+          <div style="display:flex; align-items:flex-end; gap:14px;">
+            <div style="width:56px; height:56px; border-radius:13px; background:oklch(0.22 0.03 250); display:flex; align-items:center; justify-content:center;">
+              <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
+                <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.72 0.11 212)"></rect>
+                <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.66 0.14 224)"></rect>
+                <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.86 0.06 230)"></rect>
+                <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.66 0.14 224)"></rect>
+                <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.72 0.11 212)"></rect>
+              </svg>
+            </div>
+            <div style="width:34px; height:34px; border-radius:8px; background:oklch(0.22 0.03 250); display:flex; align-items:center; justify-content:center;">
+              <svg width="19" height="19" viewBox="0 0 64 64" fill="none">
+                <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.72 0.11 212)"></rect>
+                <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.66 0.14 224)"></rect>
+                <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.86 0.06 230)"></rect>
+                <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.66 0.14 224)"></rect>
+                <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.72 0.11 212)"></rect>
+              </svg>
+            </div>
+            <div style="width:18px; height:18px; border-radius:5px; background:oklch(0.22 0.03 250); display:flex; align-items:center; justify-content:center;">
+              <svg width="11" height="11" viewBox="0 0 64 64" fill="none">
+                <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.72 0.11 212)"></rect>
+                <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.66 0.14 224)"></rect>
+                <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.86 0.06 230)"></rect>
+                <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.66 0.14 224)"></rect>
+                <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.72 0.11 212)"></rect>
+              </svg>
+            </div>
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.62 0.01 250);">App icon · 512 / 64 / 16</div>
+        </div>
+      </div>
+
+      <!-- reversed -->
+      <div style="background:oklch(0.21 0.025 250); border-radius:14px; padding:40px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+        <div style="display:flex; align-items:center; gap:18px;">
+          <svg width="46" height="46" viewBox="0 0 64 64" fill="none">
+            <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(1 0 0)" opacity="0.55"></rect>
+            <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(1 0 0)" opacity="0.75"></rect>
+            <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(1 0 0)"></rect>
+            <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(1 0 0)" opacity="0.75"></rect>
+            <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(1 0 0)" opacity="0.55"></rect>
+          </svg>
+          <div style="display:flex; align-items:baseline; gap:9px;"><div style="font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.98 0.003 250);">VueNexa</div><div style="font-family:'Space Grotesk',sans-serif; font-size:9.5px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:oklch(0.72 0.09 220);">Enterprise</div></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:18px;">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+            <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.35 0.02 250)"></rect>
+            <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.35 0.02 250)"></rect>
+            <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.35 0.02 250)"></rect>
+            <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.35 0.02 250)"></rect>
+            <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.35 0.02 250)"></rect>
+          </svg>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.55 0.015 250); max-width:90px; line-height:1.6;">Reversed &amp; single-tone</div>
+        </div>
+      </div>
+
+      <sc-if value="{{ showSpecs }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:110px; border:1px solid oklch(0.9 0.006 250); border-radius:10px; padding:10px 12px; display:flex; flex-direction:column; gap:8px;">
+            <div style="height:22px; border-radius:5px; background:oklch(0.45 0.16 250);"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); line-height:1.5;">Nexa Blue<br>#1F4FB0</div>
+          </div>
+          <div style="flex:1; min-width:110px; border:1px solid oklch(0.9 0.006 250); border-radius:10px; padding:10px 12px; display:flex; flex-direction:column; gap:8px;">
+            <div style="height:22px; border-radius:5px; background:oklch(0.58 0.15 224);"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); line-height:1.5;">Signal<br>#2C84D6</div>
+          </div>
+          <div style="flex:1; min-width:110px; border:1px solid oklch(0.9 0.006 250); border-radius:10px; padding:10px 12px; display:flex; flex-direction:column; gap:8px;">
+            <div style="height:22px; border-radius:5px; background:oklch(0.66 0.12 212);"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); line-height:1.5;">Thread<br>#4FA8DC</div>
+          </div>
+          <div style="flex:1; min-width:110px; border:1px solid oklch(0.9 0.006 250); border-radius:10px; padding:10px 12px; display:flex; flex-direction:column; gap:8px;">
+            <div style="height:22px; border-radius:5px; background:oklch(0.21 0.025 250);"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); line-height:1.5;">Ink<br>#22262F</div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <!-- ============ OPTION 1b ============ -->
+    <div id="1b" style="width:620px; box-sizing:border-box; display:flex; flex-direction:column; gap:20px; background:oklch(0.99 0.003 250); border:1px solid oklch(0.89 0.006 250); border-radius:20px; padding:32px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; background:oklch(0.45 0.15 268); color:#fff; padding:4px 9px; border-radius:6px;">1b</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; color:oklch(0.24 0.02 250);">Nexus</span>
+        <span style="font-size:14px; color:oklch(0.55 0.01 250); text-wrap:pretty;">A V cut from a solid tile, with the shuttle node at its vertex. Holds at 16px.</span>
+      </div>
+
+      <div style="background:oklch(0.985 0.004 250); border-radius:14px; padding:56px 40px; display:flex; align-items:center; justify-content:center; gap:22px;">
+        <svg width="86" height="86" viewBox="0 0 64 64" fill="none" aria-label="VueNexa Enterprise mark">
+          <rect x="0" y="0" width="64" height="64" rx="16" fill="oklch(0.38 0.14 262)"></rect>
+          <path d="M16 18 L32 44 L48 18" stroke="oklch(0.99 0.003 250)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="48" cy="18" r="6.5" fill="oklch(0.72 0.13 212)"></circle>
+        </svg>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; flex-direction:column; gap:6px;"><div style="font-family:'Space Grotesk',sans-serif; font-size:42px; font-weight:500; letter-spacing:0.09em; color:oklch(0.22 0.02 250); line-height:1;">VUENEXA</div><div style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:400; letter-spacing:0.42em; text-transform:uppercase; color:oklch(0.38 0.14 262);">Enterprise</div></div>
+          <sc-if value="{{ showTagline }}" hint-placeholder-val="{{ true }}">
+            <div style="font-family:'Outfit',sans-serif; font-size:13px; font-weight:400; letter-spacing:0.055em; color:oklch(0.52 0.03 250);">We build with care and deliver with pride.</div>
+          </sc-if>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div style="background:oklch(0.985 0.004 250); border-radius:14px; padding:32px 20px; display:flex; flex-direction:column; align-items:center; gap:16px;">
+          <svg width="52" height="52" viewBox="0 0 64 64" fill="none">
+            <rect x="0" y="0" width="64" height="64" rx="16" fill="oklch(0.38 0.14 262)"></rect>
+            <path d="M16 18 L32 44 L48 18" stroke="oklch(0.99 0.003 250)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="48" cy="18" r="6.5" fill="oklch(0.72 0.13 212)"></circle>
+          </svg>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:4px;"><div style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:500; letter-spacing:0.09em; color:oklch(0.22 0.02 250);">VUENEXA</div><div style="font-family:'Space Grotesk',sans-serif; font-size:8.5px; font-weight:400; letter-spacing:0.34em; text-transform:uppercase; color:oklch(0.38 0.14 262);">Enterprise</div></div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.62 0.01 250);">Stacked</div>
+        </div>
+        <div style="background:oklch(0.985 0.004 250); border-radius:14px; padding:32px 20px; display:flex; flex-direction:column; align-items:center; gap:16px;">
+          <div style="display:flex; align-items:flex-end; gap:14px;">
+            <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+              <rect x="0" y="0" width="64" height="64" rx="14" fill="oklch(0.38 0.14 262)"></rect>
+              <path d="M16 18 L32 44 L48 18" stroke="oklch(0.99 0.003 250)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="48" cy="18" r="6.5" fill="oklch(0.72 0.13 212)"></circle>
+            </svg>
+            <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+              <rect x="0" y="0" width="64" height="64" rx="14" fill="oklch(0.38 0.14 262)"></rect>
+              <path d="M16 18 L32 44 L48 18" stroke="oklch(0.99 0.003 250)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="48" cy="18" r="6.5" fill="oklch(0.72 0.13 212)"></circle>
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 64 64" fill="none">
+              <rect x="0" y="0" width="64" height="64" rx="14" fill="oklch(0.38 0.14 262)"></rect>
+              <path d="M16 18 L32 44 L48 18" stroke="oklch(0.99 0.003 250)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="48" cy="18" r="6.5" fill="oklch(0.72 0.13 212)"></circle>
+            </svg>
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.62 0.01 250);">App icon · 512 / 64 / 16</div>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.21 0.025 250); border-radius:14px; padding:40px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+        <div style="display:flex; align-items:center; gap:18px;">
+          <svg width="46" height="46" viewBox="0 0 64 64" fill="none">
+            <rect x="1.5" y="1.5" width="61" height="61" rx="15" stroke="oklch(1 0 0)" stroke-width="3" opacity="0.5"></rect>
+            <path d="M16 18 L32 44 L48 18" stroke="oklch(1 0 0)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="48" cy="18" r="6.5" fill="oklch(0.72 0.13 212)"></circle>
+          </svg>
+          <div style="display:flex; flex-direction:column; gap:4px;"><div style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:500; letter-spacing:0.09em; color:oklch(0.98 0.003 250);">VUENEXA</div><div style="font-family:'Space Grotesk',sans-serif; font-size:9px; font-weight:400; letter-spacing:0.34em; text-transform:uppercase; color:oklch(0.72 0.13 212);">Enterprise</div></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:18px;">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+            <rect x="0" y="0" width="64" height="64" rx="16" fill="oklch(0.35 0.02 250)"></rect>
+            <path d="M16 18 L32 44 L48 18" stroke="oklch(0.21 0.025 250)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.55 0.015 250); max-width:90px; line-height:1.6;">Reversed &amp; single-tone</div>
+        </div>
+      </div>
+
+      <sc-if value="{{ showSpecs }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:110px; border:1px solid oklch(0.9 0.006 250); border-radius:10px; padding:10px 12px; display:flex; flex-direction:column; gap:8px;">
+            <div style="height:22px; border-radius:5px; background:oklch(0.38 0.14 262);"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); line-height:1.5;">Nexa Indigo<br>#31409B</div>
+          </div>
+          <div style="flex:1; min-width:110px; border:1px solid oklch(0.9 0.006 250); border-radius:10px; padding:10px 12px; display:flex; flex-direction:column; gap:8px;">
+            <div style="height:22px; border-radius:5px; background:oklch(0.72 0.13 212);"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); line-height:1.5;">Shuttle<br>#43BAF0</div>
+          </div>
+          <div style="flex:1; min-width:110px; border:1px solid oklch(0.9 0.006 250); border-radius:10px; padding:10px 12px; display:flex; flex-direction:column; gap:8px;">
+            <div style="height:22px; border-radius:5px; background:oklch(0.21 0.025 250);"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); line-height:1.5;">Ink<br>#22262F</div>
+          </div>
+          <div style="flex:1; min-width:110px; border:1px solid oklch(0.9 0.006 250); border-radius:10px; padding:10px 12px; display:flex; flex-direction:column; gap:8px;">
+            <div style="height:22px; border-radius:5px; background:oklch(0.95 0.004 250); border:1px solid oklch(0.88 0.006 250);"></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); line-height:1.5;">Paper<br>#F0F1F3</div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+  </div>
+
+  <!-- clearspace / construction -->
+  <div style="display:flex; flex-wrap:wrap; gap:40px;">
+    <div style="width:620px; box-sizing:border-box; background:oklch(0.99 0.003 250); border:1px solid oklch(0.89 0.006 250); border-radius:20px; padding:32px; display:flex; flex-direction:column; gap:20px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:600; color:oklch(0.24 0.02 250);">Clearspace &amp; minimum size</div>
+      <div style="background:oklch(0.985 0.004 250); border-radius:14px; padding:28px; display:flex; align-items:center; justify-content:center;">
+        <div style="border:1px dashed oklch(0.78 0.01 250); padding:24px; display:flex; align-items:center; gap:18px;">
+          <svg width="48" height="48" viewBox="0 0 64 64" fill="none">
+            <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+            <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+            <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect>
+            <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+            <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+          </svg>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.22 0.02 250);">VueNexa</div>
+        </div>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em; color:oklch(0.5 0.015 250); line-height:1.9;">Clearspace = width of one bar on all four sides.<br>Minimum lockup width 120px · mark-only minimum 16px.</div>
+    </div>
+
+    <div style="width:620px; box-sizing:border-box; background:oklch(0.99 0.003 250); border:1px solid oklch(0.89 0.006 250); border-radius:20px; padding:32px; display:flex; flex-direction:column; gap:20px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:600; color:oklch(0.24 0.02 250);">Typeface</div>
+      <div style="background:oklch(0.985 0.004 250); border-radius:14px; padding:28px; display:flex; flex-direction:column; gap:14px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:38px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.22 0.02 250); line-height:1.1;">Space Grotesk</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:400; color:oklch(0.45 0.02 250);">Wordmark &amp; headings — ABCDEFGHIJKLM 0123456789</div>
+        <div style="height:1px; background:oklch(0.9 0.006 250);"></div>
+        <div style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:400; color:oklch(0.22 0.02 250);">Outfit</div>
+        <div style="font-family:'Outfit',sans-serif; font-size:15px; color:oklch(0.45 0.02 250);">Body &amp; interface — ABCDEFGHIJKLM 0123456789</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTagline&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Lockup&quot;},&quot;showSpecs&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Lockup&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showTagline: this.props.showTagline ?? true,
+      showSpecs: this.props.showSpecs ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:oklch(0.985 0.004 250); font-family:'Outfit',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:oklch(0.45 0.16 250); text-decoration:none; }
+  a:hover { color:oklch(0.34 0.14 258); }
+  @keyframes vx-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+</style>
+</helmet>
+
+<div style="width:100%; background:oklch(0.985 0.004 250); color:oklch(0.22 0.02 250);">
+
+  <!-- NAV -->
+  <div style="position:sticky; top:0; z-index:20; background:oklch(0.985 0.004 250 / 0.88); backdrop-filter:blur(14px); border-bottom:1px solid oklch(0.9 0.006 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:16px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px;">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
+          <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+          <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+          <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect>
+          <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+          <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+        </svg>
+        <div style="display:flex; align-items:baseline; gap:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600; letter-spacing:-0.03em;">VueNexa</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:9px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:oklch(0.45 0.16 250);">Enterprise</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:oklch(0.38 0.02 250);">
+        <a href="#services" style="color:inherit;">Services</a>
+        <a href="#products" style="color:inherit;">Products</a>
+        <a href="#process" style="color:inherit;">How we work</a>
+        <a href="#insights" style="color:inherit;">Insights</a>
+        <a href="#contact" style="font-family:'Outfit',sans-serif; font-size:14px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; padding:9px 18px; border-radius:8px;" style-hover="background:oklch(0.36 0.15 256);">Talk to us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="max-width:1240px; margin:0 auto; padding:88px 40px 72px; display:grid; grid-template-columns:1.05fr 1fr; gap:64px; align-items:center;">
+    <div style="display:flex; flex-direction:column; gap:26px;">
+      <div style="display:inline-flex; align-items:center; gap:9px; align-self:flex-start; border:1px solid oklch(0.88 0.02 250); border-radius:999px; padding:6px 14px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.05 250);">
+        <span style="width:7px; height:7px; border-radius:99px; background:oklch(0.66 0.16 148);"></span>
+        Software services &amp; industrial products
+      </div>
+      <h1 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:60px; line-height:1.03; letter-spacing:-0.035em; font-weight:600; text-wrap:pretty;">Engineering teams for companies that make things.</h1>
+      <p style="margin:0; font-size:19px; line-height:1.62; color:oklch(0.44 0.02 250); max-width:520px; text-wrap:pretty;">VueNexa Enterprise builds custom software for firms, and ships its own products for the textile industry — starting with real-time loom and machine monitoring.</p>
+      <div style="display:flex; gap:12px; align-items:center; padding-top:6px;">
+        <a href="#contact" style="font-size:15px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; padding:13px 24px; border-radius:9px;" style-hover="background:oklch(0.36 0.15 256);">Start a project</a>
+        <a href="#products" style="font-size:15px; font-weight:500; color:oklch(0.28 0.02 250); border:1px solid oklch(0.85 0.008 250); background:oklch(1 0 0); padding:13px 24px; border-radius:9px;" style-hover="border-color:oklch(0.7 0.02 250);">See the product</a>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.06em; color:oklch(0.58 0.015 250); padding-top:10px;">We build with care and deliver with pride.</div>
+    </div>
+    <div style="border:1px solid oklch(0.88 0.008 250); border-radius:18px; background:oklch(1 0 0); padding:12px; box-shadow:0 24px 60px -32px oklch(0.3 0.06 250 / 0.35);">
+      <div style="height:400px; border-radius:11px; background-color:oklch(0.955 0.008 240); background-image:repeating-linear-gradient(135deg, oklch(0.9 0.02 240) 0 1px, transparent 1px 11px); display:flex; align-items:flex-end; justify-content:center; padding:16px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; color:oklch(0.48 0.03 245); background:oklch(1 0 0 / 0.9); border-radius:6px; padding:6px 12px;">product screenshot — live monitoring dashboard</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TWO ARMS -->
+  <div style="border-top:1px solid oklch(0.9 0.006 250); border-bottom:1px solid oklch(0.9 0.006 250); background:oklch(1 0 0);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr;">
+      <div style="padding:52px 56px 52px 0; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:12px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">01 — Services</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:27px; font-weight:600; letter-spacing:-0.025em;">We build software for other firms</div>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:oklch(0.45 0.02 250); max-width:460px;">Long-running engineering teams that take a system from discovery to production and stay with it afterwards.</p>
+      </div>
+      <div style="padding:52px 0 52px 56px; display:flex; flex-direction:column; gap:12px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">02 — Products</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:27px; font-weight:600; letter-spacing:-0.025em;">And our own for the textile floor</div>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:oklch(0.45 0.02 250); max-width:460px;">Machine and loom monitoring built from time spent inside working mills, not from a spec document.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CLIENTS -->
+  <div style="background:oklch(0.985 0.004 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:72px 40px;">
+      <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:28px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Clients</div>
+        <div style="flex:1; height:1px; background:oklch(0.9 0.006 250);"></div>
+        <div style="font-size:14.5px; color:oklch(0.5 0.02 250);">Teams we have built and shipped software with.</div>
+      </div>
+      <div style="position:relative; overflow:hidden; mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);">
+        <div style="display:flex; width:max-content; animation:vx-marquee 38s linear infinite;">
+          <a href="https://www.scyne.com.au/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=scyne.com.au&amp;sz=128" alt="Scyne Advisory logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Scyne Advisory</span>
+          </a>
+          <a href="https://www.t-mobile.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=t-mobile.com&amp;sz=128" alt="T-Mobile logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">T-Mobile</span>
+          </a>
+          <a href="https://smartsolutions.az/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=smartsolutions.az&amp;sz=128" alt="Smart Solutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Smart Solutions</span>
+          </a>
+          <a href="https://wealthai.tech/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=wealthai.tech&amp;sz=128" alt="WealthAI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">WealthAI</span>
+          </a>
+          <a href="https://www.accentvision.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.accentvision.com/assets/images/logo.png" alt="Accent Vision logo" style="height:28px; width:28px; flex:none; object-fit:contain;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Accent Vision</span>
+          </a>
+          <a href="https://analyticsfoxsoftwares.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=analyticsfoxsoftwares.com&amp;sz=128" alt="Analytics Fox Softwares logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Analytics Fox Softwares</span>
+          </a>
+          <a href="https://digitalevolutions.ae/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=digitalevolutions.ae&amp;sz=128" alt="Digital Evolutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Digital Evolutions</span>
+          </a>
+          <a href="https://www.mauryan.ai/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=mauryan.ai&amp;sz=128" alt="Mauryan AI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Mauryan AI</span>
+          </a>
+          <a href="https://www.scyne.com.au/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=scyne.com.au&amp;sz=128" alt="Scyne Advisory logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Scyne Advisory</span>
+          </a>
+          <a href="https://www.t-mobile.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=t-mobile.com&amp;sz=128" alt="T-Mobile logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">T-Mobile</span>
+          </a>
+          <a href="https://smartsolutions.az/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=smartsolutions.az&amp;sz=128" alt="Smart Solutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Smart Solutions</span>
+          </a>
+          <a href="https://wealthai.tech/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=wealthai.tech&amp;sz=128" alt="WealthAI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">WealthAI</span>
+          </a>
+          <a href="https://www.accentvision.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.accentvision.com/assets/images/logo.png" alt="Accent Vision logo" style="height:28px; width:28px; flex:none; object-fit:contain;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Accent Vision</span>
+          </a>
+          <a href="https://analyticsfoxsoftwares.com/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=analyticsfoxsoftwares.com&amp;sz=128" alt="Analytics Fox Softwares logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Analytics Fox Softwares</span>
+          </a>
+          <a href="https://digitalevolutions.ae/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=digitalevolutions.ae&amp;sz=128" alt="Digital Evolutions logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Digital Evolutions</span>
+          </a>
+          <a href="https://www.mauryan.ai/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:16px 28px; border:1px solid oklch(0.92 0.006 250); border-radius:12px; background:oklch(1 0 0); color:inherit; text-decoration:none; flex:none; white-space:nowrap; margin-right:16px;" style-hover="border-color:oklch(0.78 0.04 250);">
+            <img src="https://www.google.com/s2/favicons?domain=mauryan.ai&amp;sz=128" alt="Mauryan AI logo" width="28" height="28" style="width:28px; height:28px; border-radius:7px; flex:none; object-fit:contain; background:oklch(0.97 0.004 250);">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.3 0.02 250);">Mauryan AI</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div id="services" style="max-width:1240px; margin:0 auto; padding:88px 40px;">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:40px; margin-bottom:40px;">
+      <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:40px; font-weight:600; letter-spacing:-0.03em; max-width:560px; text-wrap:pretty;">What we take on</h2>
+      <p style="margin:0; font-size:16px; line-height:1.65; color:oklch(0.48 0.02 250); max-width:400px;">Most engagements start with one system and grow into a standing team.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.45 0.16 250);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">Web platforms</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Internal tools, customer portals and admin systems that hold up under daily operational load.</p>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.58 0.15 224);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">Mobile apps</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Android and iOS applications for teams who work away from a desk.</p>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.66 0.12 212);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">APIs &amp; integration</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Services that connect ERP, accounting and shop-floor systems that were never meant to talk.</p>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.38 0.14 262);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">Cloud &amp; DevOps</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Deployment, monitoring and release pipelines, including on-premise servers inside factories.</p>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.58 0.15 224);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">Data &amp; dashboards</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Reporting that answers the questions an owner actually asks at the end of a shift.</p>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); padding:28px; display:flex; flex-direction:column; gap:10px;" style-hover="border-color:oklch(0.72 0.06 250);">
+        <div style="width:26px; height:3px; border-radius:2px; background:oklch(0.66 0.12 212);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.02em; margin-top:8px;">IoT &amp; devices</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Sensors, gateways and firmware that get machine data off the floor and into a database.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT -->
+  <div id="products" style="background:oklch(0.21 0.025 250); color:oklch(0.97 0.004 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:88px 40px; display:grid; grid-template-columns:1fr 1.1fr; gap:64px; align-items:center;">
+      <div style="display:flex; flex-direction:column; gap:22px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.72 0.09 220);">VueNexa product</div>
+        <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:42px; font-weight:600; letter-spacing:-0.03em; line-height:1.1; text-wrap:pretty;">Loom &amp; machine efficiency monitoring</h2>
+        <p style="margin:0; font-size:17px; line-height:1.65; color:oklch(0.75 0.012 250); max-width:460px; text-wrap:pretty;">Every loom reports its own status. Owners see live efficiency, downtime and production from a phone, a PC or a screen on the wall.</p>
+        <div style="display:flex; flex-direction:column; gap:14px; padding-top:8px;">
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <span style="width:6px; height:6px; border-radius:99px; background:oklch(0.72 0.13 212); margin-top:9px; flex:none;"></span>
+            <div><div style="font-size:16px; font-weight:500;">Live per-machine efficiency</div><div style="font-size:14.5px; color:oklch(0.68 0.012 250); line-height:1.6;">Status, speed and stoppage for every loom, updated continuously.</div></div>
+          </div>
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <span style="width:6px; height:6px; border-radius:99px; background:oklch(0.72 0.13 212); margin-top:9px; flex:none;"></span>
+            <div><div style="font-size:16px; font-weight:500;">Automatic shift reports</div><div style="font-size:14.5px; color:oklch(0.68 0.012 250); line-height:1.6;">Daily, weekly and monthly summaries sent to the people who need them.</div></div>
+          </div>
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <span style="width:6px; height:6px; border-radius:99px; background:oklch(0.72 0.13 212); margin-top:9px; flex:none;"></span>
+            <div><div style="font-size:16px; font-weight:500;">Wireless installation</div><div style="font-size:14.5px; color:oklch(0.68 0.012 250); line-height:1.6;">Devices connect over WiFi, so the factory does not need rewiring.</div></div>
+          </div>
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <span style="width:6px; height:6px; border-radius:99px; background:oklch(0.72 0.13 212); margin-top:9px; flex:none;"></span>
+            <div><div style="font-size:16px; font-weight:500;">Quality &amp; costing history</div><div style="font-size:14.5px; color:oklch(0.68 0.012 250); line-height:1.6;">Fabric weight, defects and cost tracked batch by batch.</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="border:1px solid oklch(0.33 0.02 250); border-radius:16px; background:oklch(0.25 0.022 250); padding:10px;">
+          <div style="height:330px; border-radius:9px; background-color:oklch(0.29 0.02 250); background-image:repeating-linear-gradient(135deg, oklch(0.34 0.025 250) 0 1px, transparent 1px 11px); display:flex; align-items:flex-end; justify-content:center; padding:14px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; color:oklch(0.78 0.02 245); background:oklch(0.22 0.02 250 / 0.85); border-radius:6px; padding:6px 12px;">screenshot — factory floor overview</div>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div style="border:1px solid oklch(0.33 0.02 250); border-radius:16px; background:oklch(0.25 0.022 250); padding:10px;">
+            <div style="height:150px; border-radius:9px; background-color:oklch(0.29 0.02 250); background-image:repeating-linear-gradient(135deg, oklch(0.34 0.025 250) 0 1px, transparent 1px 11px); display:flex; align-items:flex-end; padding:12px;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; color:oklch(0.78 0.02 245);">mobile app</div>
+            </div>
+          </div>
+          <div style="border:1px solid oklch(0.33 0.02 250); border-radius:16px; background:oklch(0.25 0.022 250); padding:10px;">
+            <div style="height:150px; border-radius:9px; background-color:oklch(0.29 0.02 250); background-image:repeating-linear-gradient(135deg, oklch(0.34 0.025 250) 0 1px, transparent 1px 11px); display:flex; align-items:flex-end; padding:12px;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; color:oklch(0.78 0.02 245);">device on machine</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <div id="process" style="max-width:1240px; margin:0 auto; padding:88px 40px;">
+    <h2 style="margin:0 0 40px; font-family:'Space Grotesk',sans-serif; font-size:40px; font-weight:600; letter-spacing:-0.03em;">How we work</h2>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid oklch(0.88 0.008 250);">
+      <div style="padding:28px 28px 28px 0; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.45 0.16 250);">01</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em;">Understand the floor</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">We visit, watch the work and write down where time is actually lost.</p>
+      </div>
+      <div style="padding:28px; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.45 0.16 250);">02</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em;">Scope and estimate</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">A written plan with milestones, costs and what is deliberately out of scope.</p>
+      </div>
+      <div style="padding:28px; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.45 0.16 250);">03</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em;">Build in the open</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Short cycles, working software you can try, and no surprises at handover.</p>
+      </div>
+      <div style="padding:28px 0 28px 28px; display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.45 0.16 250);">04</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em;">Run and support</div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:oklch(0.47 0.02 250);">Monitoring, fixes and improvements once the system is carrying real work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAGLINE BAND -->
+  <div style="background:oklch(1 0 0); border-top:1px solid oklch(0.9 0.006 250); border-bottom:1px solid oklch(0.9 0.006 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:72px 40px; display:flex; align-items:center; gap:28px;">
+      <svg width="44" height="44" viewBox="0 0 64 64" fill="none" style="flex:none;">
+        <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+        <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+        <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect>
+        <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+        <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+      </svg>
+      <div style="font-family:'Space Grotesk',sans-serif; font-size:34px; font-weight:500; letter-spacing:-0.025em; color:oklch(0.26 0.02 250);">We build with care and deliver with pride.</div>
+    </div>
+  </div>
+
+  <!-- INSIGHTS -->
+  <div id="insights" style="max-width:1240px; margin:0 auto; padding:88px 40px;">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:32px;">
+      <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:40px; font-weight:600; letter-spacing:-0.03em;">Insights</h2>
+      <a href="#insights" style="font-size:15px;">All writing →</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:170px; background-color:oklch(0.95 0.008 240); background-image:repeating-linear-gradient(135deg, oklch(0.9 0.02 240) 0 1px, transparent 1px 11px); display:flex; align-items:flex-end; padding:12px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:oklch(0.5 0.03 245);">article image</div>
+        </div>
+        <div style="padding:22px; display:flex; flex-direction:column; gap:9px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Engineering</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">Getting machine data off the floor without rewiring the factory</div>
+        </div>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:170px; background-color:oklch(0.95 0.008 240); background-image:repeating-linear-gradient(135deg, oklch(0.9 0.02 240) 0 1px, transparent 1px 11px); display:flex; align-items:flex-end; padding:12px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:oklch(0.5 0.03 245);">article image</div>
+        </div>
+        <div style="padding:22px; display:flex; flex-direction:column; gap:9px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Operations</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">What a mill owner actually reads in a shift report</div>
+        </div>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:14px; background:oklch(1 0 0); overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:170px; background-color:oklch(0.95 0.008 240); background-image:repeating-linear-gradient(135deg, oklch(0.9 0.02 240) 0 1px, transparent 1px 11px); display:flex; align-items:flex-end; padding:12px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:oklch(0.5 0.03 245);">article image</div>
+        </div>
+        <div style="padding:22px; display:flex; flex-direction:column; gap:9px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Practice</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty;">Why we start every engagement on site</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" style="max-width:1240px; margin:0 auto; padding:0 40px 88px;">
+    <div style="border:1px solid oklch(0.88 0.02 250); border-radius:20px; background:oklch(1 0 0); padding:56px; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;">
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:600; letter-spacing:-0.03em; line-height:1.12; text-wrap:pretty;">Tell us what you are trying to build.</h2>
+        <p style="margin:0; font-size:16.5px; line-height:1.65; color:oklch(0.46 0.02 250); max-width:400px;">Send a short note about the problem. We reply with an honest view of whether we are the right team for it.</p>
+        <div style="display:flex; flex-direction:column; gap:6px; padding-top:8px; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:oklch(0.42 0.02 250); line-height:1.9;">
+          <div>tech@vuenexa.com</div>
+          <div>Surat, Gujarat, India</div>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <input placeholder="Name" style="font-family:'Outfit',sans-serif; font-size:15px; padding:13px 15px; border:1px solid oklch(0.88 0.008 250); border-radius:9px; background:oklch(0.99 0.003 250); outline:none; color:oklch(0.22 0.02 250);">
+          <input placeholder="Company" style="font-family:'Outfit',sans-serif; font-size:15px; padding:13px 15px; border:1px solid oklch(0.88 0.008 250); border-radius:9px; background:oklch(0.99 0.003 250); outline:none; color:oklch(0.22 0.02 250);">
+        </div>
+        <input placeholder="Email" style="font-family:'Outfit',sans-serif; font-size:15px; padding:13px 15px; border:1px solid oklch(0.88 0.008 250); border-radius:9px; background:oklch(0.99 0.003 250); outline:none; color:oklch(0.22 0.02 250);">
+        <textarea placeholder="What are you working on?" rows="4" style="font-family:'Outfit',sans-serif; font-size:15px; padding:13px 15px; border:1px solid oklch(0.88 0.008 250); border-radius:9px; background:oklch(0.99 0.003 250); outline:none; resize:vertical; color:oklch(0.22 0.02 250);"></textarea>
+        <button style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; border:none; padding:14px; border-radius:9px; cursor:pointer;" style-hover="background:oklch(0.36 0.15 256);">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:oklch(0.21 0.025 250); color:oklch(0.9 0.01 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:56px 40px 32px; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:48px;">
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="display:flex; align-items:center; gap:11px;">
+          <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
+            <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(1 0 0)" opacity="0.55"></rect>
+            <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(1 0 0)" opacity="0.75"></rect>
+            <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(1 0 0)"></rect>
+            <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(1 0 0)" opacity="0.75"></rect>
+            <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(1 0 0)" opacity="0.55"></rect>
+          </svg>
+          <div style="display:flex; align-items:baseline; gap:8px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.98 0.003 250);">VueNexa</span>
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:8.5px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:oklch(0.72 0.09 220);">Enterprise</span>
+          </div>
+        </div>
+        <p style="margin:0; font-size:14.5px; line-height:1.7; color:oklch(0.7 0.012 250); max-width:280px;">Software services and industrial products, built in Surat for firms that make things.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:11px; font-size:14.5px; color:oklch(0.75 0.012 250);">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.58 0.015 250); margin-bottom:4px;">Company</div>
+        <a href="#services" style="color:inherit;">Services</a>
+        <a href="#products" style="color:inherit;">Products</a>
+        <a href="#process" style="color:inherit;">How we work</a>
+        <a href="#insights" style="color:inherit;">Insights</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:11px; font-size:14.5px; color:oklch(0.75 0.012 250);">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.58 0.015 250); margin-bottom:4px;">Product</div>
+        <a href="#products" style="color:inherit;">Loom monitoring</a>
+        <a href="#products" style="color:inherit;">Mobile app</a>
+        <a href="#products" style="color:inherit;">Reporting</a>
+        <a href="#contact" style="color:inherit;">Request a demo</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:11px; font-size:14.5px; color:oklch(0.75 0.012 250);">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.58 0.015 250); margin-bottom:4px;">Contact</div>
+        <a href="mailto:tech@vuenexa.com" style="color:inherit;">tech@vuenexa.com</a>
+        <span>Surat, Gujarat</span>
+      </div>
+    </div>
+    <div style="max-width:1240px; margin:0 auto; padding:0 40px 40px;">
+      <div style="border-top:1px solid oklch(0.3 0.02 250); padding-top:20px; display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.58 0.015 250);">
+        <span>© 2026 VueNexa Enterprise</span>
+        <span>We build with care and deliver with pride.</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

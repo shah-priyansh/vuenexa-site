@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</helmet>
+
+<div ref="{{ root }}" style="position:sticky; top:0; z-index:20; background:oklch(0.985 0.004 250 / 0.92); backdrop-filter:blur(14px); border-bottom:1px solid oklch(0.9 0.006 250); font-family:'Outfit',system-ui,sans-serif;">
+  <div style="max-width:1240px; margin:0 auto; padding:14px clamp(20px,4vw,40px); display:flex; align-items:center; justify-content:space-between; gap:20px;">
+    <a href="Home.dc.html" style="display:flex; align-items:center; gap:11px; text-decoration:none; flex:none;">
+      <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
+        <rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+        <rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+        <rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect>
+        <rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect>
+        <rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect>
+      </svg>
+      <div style="display:flex; align-items:baseline; gap:7px;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.22 0.02 250);">VueNexa</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:8.5px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:oklch(0.45 0.16 250);">Enterprise</span>
+      </div>
+    </a>
+
+    <div style="display:{{ rowDisplay }}; align-items:center; gap:26px; font-size:15px;">
+      <a href="Services.dc.html" style="color:{{ cServices }}; font-weight:{{ wServices }}; text-decoration:none; white-space:nowrap;" style-hover="color:oklch(0.45 0.16 250);">Services</a>
+      <a href="Products.dc.html" style="color:{{ cProducts }}; font-weight:{{ wProducts }}; text-decoration:none; white-space:nowrap;" style-hover="color:oklch(0.45 0.16 250);">Products</a>
+      <a href="Work.dc.html" style="color:{{ cWork }}; font-weight:{{ wWork }}; text-decoration:none; white-space:nowrap;" style-hover="color:oklch(0.45 0.16 250);">Work</a>
+      <a href="Insights.dc.html" style="color:{{ cInsights }}; font-weight:{{ wInsights }}; text-decoration:none; white-space:nowrap;" style-hover="color:oklch(0.45 0.16 250);">Insights</a>
+      <a href="Contact.dc.html" style="font-size:14px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; padding:9px 18px; border-radius:8px; text-decoration:none; white-space:nowrap;" style-hover="background:oklch(0.36 0.15 256);">Talk to us</a>
+    </div>
+
+    <button onClick="{{ toggle }}" aria-label="Menu" style="display:{{ burgerDisplay }}; flex-direction:column; gap:4px; width:40px; height:36px; align-items:center; justify-content:center; background:oklch(1 0 0); border:1px solid oklch(0.9 0.006 250); border-radius:9px; cursor:pointer; padding:0;">
+      <span style="width:16px; height:1.8px; background:oklch(0.35 0.02 250); border-radius:2px;"></span>
+      <span style="width:16px; height:1.8px; background:oklch(0.35 0.02 250); border-radius:2px;"></span>
+      <span style="width:16px; height:1.8px; background:oklch(0.35 0.02 250); border-radius:2px;"></span>
+    </button>
+  </div>
+
+  <div style="display:{{ panelDisplay }}; flex-direction:column; border-top:1px solid oklch(0.92 0.006 250); background:oklch(0.99 0.003 250); padding:8px clamp(20px,4vw,40px) 18px;">
+    <a href="Services.dc.html" style="font-size:16px; color:oklch(0.3 0.02 250); text-decoration:none; padding:13px 0; border-bottom:1px solid oklch(0.94 0.006 250);">Services</a>
+    <a href="Products.dc.html" style="font-size:16px; color:oklch(0.3 0.02 250); text-decoration:none; padding:13px 0; border-bottom:1px solid oklch(0.94 0.006 250);">Products</a>
+    <a href="Work.dc.html" style="font-size:16px; color:oklch(0.3 0.02 250); text-decoration:none; padding:13px 0; border-bottom:1px solid oklch(0.94 0.006 250);">Work</a>
+    <a href="Insights.dc.html" style="font-size:16px; color:oklch(0.3 0.02 250); text-decoration:none; padding:13px 0; border-bottom:1px solid oklch(0.94 0.006 250);">Insights</a>
+    <a href="Contact.dc.html" style="margin-top:14px; text-align:center; font-size:15px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; padding:13px 18px; border-radius:9px; text-decoration:none;">Talk to us</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;Services&quot;,&quot;Products&quot;,&quot;Work&quot;,&quot;Insights&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { narrow: false, open: false };
+  componentDidMount() {
+    this.check = () => {
+      const w = (this.el ? this.el.clientWidth : window.innerWidth) || window.innerWidth;
+      const narrow = w < 820;
+      if (narrow !== this.state.narrow) this.setState({ narrow: narrow, open: false });
+    };
+    this.ro = new ResizeObserver(this.check);
+    if (this.el) this.ro.observe(this.el);
+    window.addEventListener("resize", this.check);
+    this.check();
+  }
+  componentWillUnmount() {
+    if (this.ro) this.ro.disconnect();
+    window.removeEventListener("resize", this.check);
+  }
+  renderVals() {
+    const on = "oklch(0.45 0.16 250)", off = "oklch(0.38 0.02 250)";
+    const a = (this.props.active || "").toLowerCase();
+    const v = {
+      root: el => { this.el = el; if (this.check) this.check(); },
+      toggle: () => this.setState(s => ({ open: !s.open })),
+      rowDisplay: this.state.narrow ? "none" : "flex",
+      burgerDisplay: this.state.narrow ? "flex" : "none",
+      panelDisplay: this.state.narrow && this.state.open ? "flex" : "none"
+    };
+    ["Services", "Products", "Work", "Insights"].forEach(k => {
+      const active = a === k.toLowerCase();
+      v["c" + k] = active ? on : off;
+      v["w" + k] = active ? 500 : 400;
+    });
+    return v;
+  }
+}
+</script>
+</body>
+</html>

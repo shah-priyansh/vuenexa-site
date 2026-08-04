@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:oklch(0.985 0.004 250); font-family:'Outfit',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:oklch(0.45 0.16 250); text-decoration:none; }
+  a:hover { color:oklch(0.34 0.14 258); }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:100%; overflow-x:hidden; background:oklch(0.985 0.004 250); color:oklch(0.22 0.02 250);">
+  <dc-import name="Site Nav" active="Products" hint-size="100%,63px"></dc-import>
+
+  <!-- HERO -->
+  <div style="max-width:1240px; margin:0 auto; padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px) 48px; display:flex; flex-direction:column; gap:22px; align-items:flex-start;">
+    <div style="display:inline-flex; align-items:center; gap:9px; border:1px solid oklch(0.88 0.02 250); border-radius:999px; padding:6px 14px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.05 250);">
+      <span style="width:7px; height:7px; border-radius:99px; background:oklch(0.66 0.16 148);"></span>
+      Live on the floor
+    </div>
+    <h1 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(32px,5vw,56px); line-height:1.04; letter-spacing:-0.035em; font-weight:600; max-width:820px; text-wrap:pretty;">Loom monitoring and production reporting for textile mills.</h1>
+    <p style="margin:0; font-size:19px; line-height:1.62; color:oklch(0.44 0.02 250); max-width:640px; text-wrap:pretty;">Each machine reports its own status over WiFi. Supervisors watch the floor in real time, owners get the numbers that matter at the end of every shift.</p>
+    <div style="display:flex; gap:12px; padding-top:6px;">
+      <a href="Contact.dc.html" style="font-size:15px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; padding:13px 24px; border-radius:9px;" style-hover="background:oklch(0.36 0.15 256);">Request a demo</a>
+      <a href="Contact.dc.html" style="font-size:15px; font-weight:500; color:oklch(0.28 0.02 250); border:1px solid oklch(0.85 0.008 250); background:oklch(1 0 0); padding:13px 24px; border-radius:9px;" style-hover="border-color:oklch(0.7 0.02 250);">Ask about installation</a>
+    </div>
+  </div>
+
+  <!-- SCALE -->
+  <div style="background:oklch(1 0 0); border-top:1px solid oklch(0.9 0.006 250); border-bottom:1px solid oklch(0.9 0.006 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(32px,5vw,44px) clamp(20px,4vw,40px); display:flex; flex-wrap:wrap; gap:24px 48px; align-items:stretch;">
+        <div style="display:flex; flex-direction:column; gap:8px; ">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:600; letter-spacing:-0.035em; color:oklch(0.24 0.02 250); line-height:1;" data-count="50" data-suffix="+">50+</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Mills running it</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px; border-left:1px solid oklch(0.92 0.006 250); padding-left:clamp(24px,4vw,48px);">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:600; letter-spacing:-0.035em; color:oklch(0.24 0.02 250); line-height:1;" data-count="1000" data-suffix="+">1000+</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Machines monitored</div>
+        </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 1: MACHINES -->
+  <div style="max-width:1240px; margin:0 auto; padding:0 40px 24px;">
+    <div style="border:1px solid oklch(0.88 0.008 250); border-radius:18px; background:oklch(1 0 0); padding:10px; box-shadow:0 30px 70px -40px oklch(0.3 0.06 250 / 0.4); overflow:hidden;">
+      <div ref="{{ frame1 }}" style="border-radius:11px; overflow:hidden; min-width:0; max-width:100%; background:oklch(0.975 0.004 250); height:632px;">
+        <div style="width:1600px; transform:scale(0.72); transform-origin:top left; display:flex; font-family:'Outfit',sans-serif;">
+          <div style="width:56px; flex:none; background:oklch(1 0 0); border-right:1px solid oklch(0.93 0.006 250); display:flex; flex-direction:column; align-items:center; gap:20px; padding:20px 0;">
+            <div style="display:flex; flex-direction:column; gap:4px;"><span style="width:16px; height:2px; background:oklch(0.45 0.02 250);"></span><span style="width:16px; height:2px; background:oklch(0.45 0.02 250);"></span><span style="width:16px; height:2px; background:oklch(0.45 0.02 250);"></span></div>
+            <div style="width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 250); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.16 250)" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20h-20"></path></svg></div>
+            <div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.93 0.006 250);"></div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; min-width:0;">
+            <div style="padding:14px 20px; background:oklch(1 0 0); border-bottom:1px solid oklch(0.93 0.006 250); display:flex; align-items:center; gap:12px;">
+              <div style="width:30px; height:30px; border-radius:9px; border:1px solid oklch(0.92 0.006 250); display:flex; align-items:center; justify-content:center; color:oklch(0.45 0.02 250);">‹</div>
+              <div style="font-size:14px; font-weight:500; color:oklch(0.3 0.02 250); background:oklch(0.96 0.004 250); border-radius:9px; padding:7px 15px;">Machines</div>
+              <div style="flex:1;"></div>
+              <div style="display:flex; align-items:center; gap:9px;">
+                <svg width="26" height="26" viewBox="0 0 64 64" fill="none"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect></svg>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">VueNexa</span>
+              </div>
+              <div style="flex:1;"></div>
+              <div style="width:30px; height:30px; border-radius:9px; border:1px solid oklch(0.92 0.006 250); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.02 250)" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path></svg></div>
+              <div style="display:flex; align-items:center; gap:8px; border:1px solid oklch(0.92 0.006 250); border-radius:10px; padding:5px 11px 5px 6px;"><div style="width:28px; height:28px; border-radius:8px; background:oklch(0.85 0.16 92); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:600; color:oklch(0.28 0.06 80);">N</div><div style="display:flex; flex-direction:column;"><span style="font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250);">Niraj</span><span style="font-size:10px; color:oklch(0.58 0.02 250);">Admin</span></div></div>
+            </div>
+            <div style="padding:16px 20px; display:flex; flex-direction:column; gap:16px; background:oklch(0.975 0.004 250);">
+              <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:12px 14px; display:flex; align-items:center; gap:9px; flex-wrap:wrap;">
+                <div style="background:oklch(0.96 0.05 160); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.38 0.1 160);">Total mtrs</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.38 0.1 160);">10,531</span></div>
+                <div style="background:oklch(0.96 0.05 155); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.4 0.1 155);">Running</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.4 0.1 155);">29</span></div>
+                <div style="background:oklch(0.96 0.04 330); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.14 330);">Low eff</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.45 0.14 330);">16</span></div>
+                <div style="background:oklch(0.96 0.05 85); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.46 0.12 70);">Poor eff</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.46 0.12 70);">9</span></div>
+                <div style="background:oklch(0.96 0.04 40); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.47 0.15 32);">Problem</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.47 0.15 32);">1</span></div>
+                <div style="background:oklch(0.955 0.045 25); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.47 0.17 25);">Fault</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.47 0.17 25);">1</span></div>
+                <div style="background:oklch(0.95 0.045 250); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.43 0.15 255);">Manual</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.43 0.15 255);">3</span></div>
+                <div style="background:oklch(0.95 0.04 210); border-radius:10px; padding:8px 13px; display:flex; align-items:center; gap:9px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.4 0.12 215);">Avg eff</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.4 0.12 215);">90%</span></div>
+                <div style="flex:1;"></div>
+                <div style="display:flex; border:1px solid oklch(0.92 0.006 250); border-radius:10px; overflow:hidden;"><div style="padding:8px 14px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.32 0.03 250); background:oklch(0.97 0.004 250);">Today</div><div style="padding:8px 14px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.6 0.02 250);">24h</div></div>
+                <div style="background:oklch(0.24 0.02 250); border-radius:10px; padding:9px 15px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#fff;">Export all</div>
+                <div style="background:oklch(0.52 0.13 168); border-radius:10px; padding:9px 15px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#fff;">TV mode</div>
+              </div>
+              <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:13px;">
+                <div style="display:flex; align-items:center; gap:12px; padding:0 2px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.24 0.02 250);">Line-1</span><span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.55 0.15 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:2px 7px;">● 2</span><div style="flex:1;"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.5 0.02 250);">● 8 run &nbsp; ● 2 stop</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.5 0.13 80); background:oklch(0.96 0.02 90); border-radius:7px; padding:4px 10px;">EFF 85.0%</span></div>
+                <div style="display:grid; grid-template-columns:repeat(10,1fr); gap:9px;"><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#1</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">168</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>168m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 4</span><span style="color:oklch(0.58 0.02 250);">∿ 709</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.72 0.15 78); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#2</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">POOR</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">241</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.6 0.14 70);">84%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:84%; height:100%; background:oklch(0.72 0.15 78);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>241m</span><span style="color:oklch(0.55 0.02 250);">84%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 27.5</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 22</span><span style="color:oklch(0.58 0.02 250);">∿ 652</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.5 0.17 262); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#3</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">MAN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">164</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.5 0.15 262);">98%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.5 0.17 262);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>164m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 4</span><span style="color:oklch(0.58 0.02 250);">∿ 0</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#4</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">233</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>233m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 34</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 6</span><span style="color:oklch(0.58 0.02 250);">∿ 694</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#5</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">163</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>163m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 702</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#6</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">204</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>204m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 38</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 648</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#7</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">159</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">95%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:95%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>159m</span><span style="color:oklch(0.55 0.02 250);">95%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 12</span><span style="color:oklch(0.58 0.02 250);">∿ 694</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#8</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">236</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>236m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 34</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 7</span><span style="color:oklch(0.58 0.02 250);">∿ 710</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.35 0.02 250); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#9</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">OFF</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">0</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.55 0.02 250);">0%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:0%; height:100%; background:oklch(0.35 0.02 250);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>0m</span><span style="color:oklch(0.55 0.02 250);">0%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 0</span><span style="color:oklch(0.58 0.02 250);">∿ 0</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.72 0.15 78); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#10</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">POOR</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">135</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.6 0.14 70);">87%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:87%; height:100%; background:oklch(0.72 0.15 78);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>135m</span><span style="color:oklch(0.55 0.02 250);">87%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 14</span><span style="color:oklch(0.58 0.02 250);">∿ 654</span></div>
+</div></div></div>
+              </div>
+              <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:13px;">
+                <div style="display:flex; align-items:center; gap:12px; padding:0 2px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.24 0.02 250);">Line-2</span><span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.55 0.15 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:2px 7px;">● 1</span><div style="flex:1;"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.5 0.02 250);">● 10 run &nbsp; ● 1 stop</span><span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.45 0.14 160); background:oklch(0.96 0.02 90); border-radius:7px; padding:4px 10px;">EFF 96.0%</span></div>
+                <div style="display:grid; grid-template-columns:repeat(10,1fr); gap:9px;"><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#11</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">161</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>161m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 7</span><span style="color:oklch(0.58 0.02 250);">∿ 698</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.72 0.15 78); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#12</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">POOR</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">251</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.6 0.14 70);">88%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:88%; height:100%; background:oklch(0.72 0.15 78);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>251m</span><span style="color:oklch(0.55 0.02 250);">88%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 27.5</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 19</span><span style="color:oklch(0.58 0.02 250);">∿ 654</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#13</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">158</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">95%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:95%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>158m</span><span style="color:oklch(0.55 0.02 250);">95%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 7</span><span style="color:oklch(0.58 0.02 250);">∿ 700</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#14</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">200</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">96%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:96%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>200m</span><span style="color:oklch(0.55 0.02 250);">96%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 38</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 8</span><span style="color:oklch(0.58 0.02 250);">∿ 650</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#15</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">163</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>163m</span><span style="color:oklch(0.55 0.02 250);">98%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 696</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#16</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">279</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>279m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 27.5</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 8</span><span style="color:oklch(0.58 0.02 250);">∿ 647</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#17</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">161</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>161m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 698</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#18</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">200</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>200m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 38</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 10</span><span style="color:oklch(0.58 0.02 250);">∿ 647</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#19</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">159</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">95%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:95%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>159m</span><span style="color:oklch(0.55 0.02 250);">95%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 7</span><span style="color:oklch(0.58 0.02 250);">∿ 696</span></div>
+</div></div><div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+<div style="background:oklch(0.58 0.16 150); padding:7px 10px; display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#fff;">#20</span><span style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 6px;">RUN</span></div>
+<div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">130</span><span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span></div>
+<div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+<div style="background:oklch(0.97 0.004 250); border-radius:8px; padding:7px 8px; display:flex; flex-direction:column; gap:4px;"><div style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:oklch(0.62 0.06 80);">☀ DAY</div><div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.4 0.02 250);"><span>130m</span><span style="color:oklch(0.55 0.02 250);">97%</span></div></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.58 0.02 250);"><span>PICK 59</span><span>THR 95%</span></div>
+<div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8.5px;"><span style="color:oklch(0.55 0.15 25);">STOPS 5</span><span style="color:oklch(0.58 0.02 250);">∿ 662</span></div>
+</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 14px; padding:20px 4px 0;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Machines</div>
+      <div style="font-size:15px; color:oklch(0.46 0.02 250);">Every loom grouped by line, colour-coded by state, with picks, stops and day totals on the card.</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div style="max-width:1240px; margin:0 auto; padding:64px 40px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:0; border-top:1px solid oklch(0.88 0.008 250);">
+      <div style="padding:26px 26px 26px 0; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:9px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3vw,34px); font-weight:600; letter-spacing:-0.03em; color:oklch(0.45 0.16 250);">Live</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em;">Per-machine efficiency</div>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:oklch(0.47 0.02 250);">Run, low-efficiency, problem, fault and manual states update continuously.</p>
+      </div>
+      <div style="padding:26px; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:9px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3vw,34px); font-weight:600; letter-spacing:-0.03em; color:oklch(0.45 0.16 250);">Shift</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em;">Automatic reports</div>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:oklch(0.47 0.02 250);">Daily, weekly and monthly summaries, exportable in one click.</p>
+      </div>
+      <div style="padding:26px; border-right:1px solid oklch(0.92 0.006 250); display:flex; flex-direction:column; gap:9px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3vw,34px); font-weight:600; letter-spacing:-0.03em; color:oklch(0.45 0.16 250);">WiFi</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em;">No rewiring</div>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:oklch(0.47 0.02 250);">Devices mount on the machine and connect wirelessly to the local server.</p>
+      </div>
+      <div style="padding:26px 0 26px 26px; display:flex; flex-direction:column; gap:9px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3vw,34px); font-weight:600; letter-spacing:-0.03em; color:oklch(0.45 0.16 250);">TV</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em;">Floor display mode</div>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:oklch(0.47 0.02 250);">A full-screen view for the screen on the shop-floor wall.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: PRODUCTION -->
+  <div style="background:oklch(1 0 0); border-top:1px solid oklch(0.9 0.006 250); border-bottom:1px solid oklch(0.9 0.006 250);">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(44px,6vw,80px) clamp(20px,4vw,40px); display:flex; flex-direction:column; gap:32px;">
+      <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px 48px;">
+        <div style="display:flex; flex-direction:column; gap:14px; max-width:560px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Production dashboard</div>
+          <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.2vw,36px); font-weight:600; letter-spacing:-0.03em; line-height:1.12; text-wrap:pretty;">Meters, amount, stock and dispatch in one place</h2>
+          <p style="margin:0; font-size:16.5px; line-height:1.65; color:oklch(0.46 0.02 250);">Running qualities broken down by machine, taka, stock, dispatch and value — filtered by date, quality or colour.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; color:oklch(0.5 0.02 250); text-align:right;">
+          <div>Challan</div><div>Bill</div><div>Inventory</div><div>Qualities</div><div>Clients</div><div>Attendance</div>
+        </div>
+      </div>
+      <div style="border:1px solid oklch(0.9 0.006 250); border-radius:18px; background:oklch(0.985 0.004 250); padding:10px; overflow:hidden;">
+        <div ref="{{ frame2 }}" style="border-radius:11px; overflow:hidden; min-width:0; max-width:100%; background:oklch(0.975 0.004 250); height:604px;">
+          <div style="width:1600px; transform:scale(0.72); transform-origin:top left; display:flex; font-family:'Outfit',sans-serif;">
+            <div style="width:238px; flex:none; background:oklch(1 0 0); border-right:1px solid oklch(0.93 0.006 250); display:flex; flex-direction:column;">
+              <div style="padding:20px 18px 22px; font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:700; letter-spacing:-0.03em; color:oklch(0.34 0.15 262);">MahaLaxmi Fab</div>
+              <div style="display:flex; flex-direction:column;">
+                <div style="display:flex; align-items:center; gap:12px; padding:11px 18px; border-radius:0; background:oklch(0.34 0.15 262);"><div style="width:16px; height:16px; border-radius:5px; background:oklch(1 0 0 / 0.85);"></div><span style="font-size:14px; font-weight:500; color:oklch(0.99 0.003 250);">Dashboard</span></div><div style="display:flex; align-items:center; gap:12px; padding:11px 18px; border-radius:0; background:transparent;"><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.88 0.008 250);"></div><span style="font-size:14px; font-weight:400; color:oklch(0.38 0.02 250);">Challan</span></div><div style="display:flex; align-items:center; gap:12px; padding:11px 18px; border-radius:0; background:transparent;"><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.88 0.008 250);"></div><span style="font-size:14px; font-weight:400; color:oklch(0.38 0.02 250);">Bill</span></div><div style="display:flex; align-items:center; gap:12px; padding:11px 18px; border-radius:0; background:transparent;"><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.88 0.008 250);"></div><span style="font-size:14px; font-weight:400; color:oklch(0.38 0.02 250);">Inventory</span></div><div style="display:flex; align-items:center; gap:12px; padding:11px 18px; border-radius:0; background:transparent;"><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.88 0.008 250);"></div><span style="font-size:14px; font-weight:400; color:oklch(0.38 0.02 250);">Qualities</span></div><div style="display:flex; align-items:center; gap:12px; padding:11px 18px; border-radius:0; background:transparent;"><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.88 0.008 250);"></div><span style="font-size:14px; font-weight:400; color:oklch(0.38 0.02 250);">Clients</span></div><div style="display:flex; align-items:center; gap:12px; padding:11px 18px; border-radius:0; background:transparent;"><div style="width:16px; height:16px; border-radius:5px; background:oklch(0.88 0.008 250);"></div><span style="font-size:14px; font-weight:400; color:oklch(0.38 0.02 250);">Attendance Approvals</span></div>
+              </div>
+              <div style="flex:1;"></div>
+              <div style="margin:16px 14px 18px; border:1px solid oklch(0.85 0.1 25); border-radius:10px; padding:11px; display:flex; align-items:center; gap:10px;"><div style="width:15px; height:15px; border-radius:4px; background:oklch(0.9 0.06 25);"></div><span style="font-size:13.5px; color:oklch(0.52 0.17 25);">Logout</span></div>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; min-width:0;">
+              <div style="padding:14px 20px; background:oklch(1 0 0); border-bottom:1px solid oklch(0.93 0.006 250); display:flex; align-items:center; gap:12px;">
+                <div style="width:30px; height:30px; border-radius:9px; border:1px solid oklch(0.92 0.006 250); display:flex; align-items:center; justify-content:center; color:oklch(0.45 0.02 250);">‹</div>
+                <div style="font-size:14px; font-weight:500; color:oklch(0.3 0.02 250); background:oklch(0.96 0.004 250); border-radius:9px; padding:7px 15px;">Dashboard</div>
+                <div style="flex:1;"></div>
+                <div style="display:flex; align-items:center; gap:9px;">
+                  <svg width="26" height="26" viewBox="0 0 64 64" fill="none"><rect x="3" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect><rect x="15.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect><rect x="28" y="8" width="8" height="48" rx="4" fill="oklch(0.45 0.16 250)"></rect><rect x="40.5" y="8" width="8" height="36" rx="4" fill="oklch(0.58 0.15 224)"></rect><rect x="53" y="8" width="8" height="24" rx="4" fill="oklch(0.66 0.12 212)"></rect></svg>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">VueNexa</span>
+                </div>
+                <div style="flex:1;"></div>
+                <div style="display:flex; align-items:center; gap:8px; border:1px solid oklch(0.92 0.006 250); border-radius:10px; padding:5px 11px 5px 6px;"><div style="width:28px; height:28px; border-radius:8px; background:oklch(0.85 0.16 92); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:600; color:oklch(0.28 0.06 80);">A</div><div style="display:flex; flex-direction:column;"><span style="font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250);">Ayush Parmar</span><span style="font-size:10px; color:oklch(0.58 0.02 250);">Admin</span></div></div>
+              </div>
+              <div style="padding:16px 20px; display:flex; flex-direction:column; gap:14px;">
+                <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:15px 16px; display:flex; align-items:center; gap:13px;">
+                  <div style="width:34px; height:34px; border-radius:10px; background:oklch(0.94 0.04 262); display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.4 0.15 262)" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20h-20"></path></svg></div>
+                  <div style="display:flex; flex-direction:column; gap:3px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.24 0.02 250);">Production Dashboard</span><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.58 0.02 250);">31 Jul – 4 Aug 2026</span></div>
+                  <div style="flex:1;"></div>
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:oklch(0.4 0.02 250); border:1px solid oklch(0.92 0.006 250); border-radius:8px; padding:7px 11px;">31/07/2026</span>
+                    <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:oklch(0.6 0.02 250);">to</span>
+                    <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:oklch(0.4 0.02 250); border:1px solid oklch(0.92 0.006 250); border-radius:8px; padding:7px 11px;">04/08/2026</span>
+                    <div style="display:flex; border:1px solid oklch(0.92 0.006 250); border-radius:9px; overflow:hidden;"><span style="padding:7px 13px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Today</span><span style="padding:7px 13px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#fff; background:oklch(0.45 0.16 250);">Month</span></div>
+                  </div>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px;">
+                  <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:13px; padding:15px 16px; display:flex; flex-direction:column; gap:11px;"><div style="display:flex; align-items:center; gap:9px;"><div style="width:26px; height:26px; border-radius:8px; background:oklch(0.62 0.14 250);"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Total meters</span></div><div style="display:flex; align-items:baseline; gap:5px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">48,960</span></div></div>
+                  <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:13px; padding:15px 16px; display:flex; flex-direction:column; gap:11px;"><div style="display:flex; align-items:center; gap:9px;"><div style="width:26px; height:26px; border-radius:8px; background:oklch(0.6 0.14 155);"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Total amount</span></div><div style="display:flex; align-items:baseline; gap:5px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; letter-spacing:-0.03em; color:oklch(0.24 0.02 250);">1,64,850.00</span></div></div>
+                  <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:13px; padding:15px 16px; display:flex; flex-direction:column; gap:11px;"><div style="display:flex; align-items:center; gap:9px;"><div style="width:26px; height:26px; border-radius:8px; background:oklch(0.62 0.15 300);"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Total saree</span></div><div style="display:flex; align-items:baseline; gap:5px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; letter-spacing:-0.03em; color:oklch(0.6 0.015 250);">0</span></div></div>
+                  <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:13px; padding:15px 16px; display:flex; flex-direction:column; gap:11px;"><div style="display:flex; align-items:center; gap:9px;"><div style="width:26px; height:26px; border-radius:8px; background:oklch(0.72 0.15 60);"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Total weight</span></div><div style="display:flex; align-items:baseline; gap:5px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; letter-spacing:-0.03em; color:oklch(0.6 0.015 250);">0</span></div></div>
+                  <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:13px; padding:15px 16px; display:flex; flex-direction:column; gap:11px;"><div style="display:flex; align-items:center; gap:9px;"><div style="width:26px; height:26px; border-radius:8px; background:oklch(0.65 0.12 195);"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.55 0.02 250);">In stock</span></div><div style="display:flex; align-items:baseline; gap:5px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; letter-spacing:-0.03em; color:oklch(0.45 0.13 200);">155</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.62 0.02 250);">/ 409</span></div></div>
+                  <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:13px; padding:15px 16px; display:flex; flex-direction:column; gap:11px;"><div style="display:flex; align-items:center; gap:9px;"><div style="width:26px; height:26px; border-radius:8px; background:oklch(0.62 0.18 5);"></div><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.55 0.02 250);">Dispatched</span></div><div style="display:flex; align-items:baseline; gap:5px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; letter-spacing:-0.03em; color:oklch(0.5 0.19 15);">254</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.62 0.02 250);">/ 409</span></div></div>
+                </div>
+                <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:13px; padding:12px 14px; display:flex; align-items:center; gap:12px;">
+                  <div style="flex:1; border:1px solid oklch(0.94 0.006 250); border-radius:9px; padding:9px 13px; font-size:12.5px; color:oklch(0.65 0.015 250);">⌕ &nbsp;Search quality, machine, colour…</div>
+                  <div style="flex:1 1 150px; min-width:0; border:1px solid oklch(0.94 0.006 250); border-radius:9px; padding:9px 13px; font-size:12.5px; color:oklch(0.65 0.015 250);">All Qualities</div>
+                  <div style="flex:1 1 150px; min-width:0; border:1px solid oklch(0.94 0.006 250); border-radius:9px; padding:9px 13px; font-size:12.5px; color:oklch(0.65 0.015 250);">All Colors</div>
+                </div>
+                <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:13px; overflow:hidden;">
+                  <div style="padding:14px 16px; display:flex; align-items:center; gap:12px;">
+                    <div style="width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.04 262);"></div>
+                    <div style="display:flex; flex-direction:column; gap:2px;"><span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:600; letter-spacing:-0.02em; color:oklch(0.24 0.02 250);">Running Qualities</span><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.58 0.02 250);">15 qualities active</span></div>
+                  </div>
+                  <table style="width:100%; border-collapse:collapse;">
+                    <thead><tr style="background:oklch(0.45 0.16 250);"><th style="padding:11px 14px; text-align:left; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Quality</th><th style="padding:11px 14px; text-align:left; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Machines</th><th style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Taka</th><th style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Stock</th><th style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Dispatch</th><th style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Meters</th><th style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Saree</th><th style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Weight</th><th style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; color:oklch(0.99 0.003 250); white-space:nowrap;">Amount</th></tr></thead>
+                    <tbody><tr style="border-bottom:1px solid oklch(0.95 0.004 250);">
+<td style="padding:11px 14px; font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250); white-space:nowrap;">(A-102) WHITE HB TEX 44</td>
+<td style="padding:11px 14px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); background:oklch(0.96 0.004 250); border-radius:6px; padding:4px 8px; white-space:nowrap;">▤ 18-19, 19, 34, 41, 41-42, 44, 52</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">50</td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.42 0.12 155); background:oklch(0.95 0.04 155); border-radius:6px; padding:3px 8px;">7</span></td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.5 0.16 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:3px 8px;">43</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">8,060</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">24,180.00</td></tr><tr style="border-bottom:1px solid oklch(0.95 0.004 250);">
+<td style="padding:11px 14px; font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250); white-space:nowrap;">(A-103) 3/3 WHITE HB TEX 48</td>
+<td style="padding:11px 14px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); background:oklch(0.96 0.004 250); border-radius:6px; padding:4px 8px; white-space:nowrap;">▤ 23, 37-38, 38-40, 42</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">47</td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.42 0.12 155); background:oklch(0.95 0.04 155); border-radius:6px; padding:3px 8px;">35</span></td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.5 0.16 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:3px 8px;">12</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">7,240</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">21,700.00</td></tr><tr style="border-bottom:1px solid oklch(0.95 0.004 250);">
+<td style="padding:11px 14px; font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250); white-space:nowrap;">(A-104) 3/3 BLACK HB TEX 41</td>
+<td style="padding:11px 14px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); background:oklch(0.96 0.004 250); border-radius:6px; padding:4px 8px; white-space:nowrap;">▤ 47, 49, 51, 51</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">30</td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.42 0.12 155); background:oklch(0.95 0.04 155); border-radius:6px; padding:3px 8px;">10</span></td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.5 0.16 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:3px 8px;">20</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">4,450</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">13,350.00</td></tr><tr style="border-bottom:1px solid oklch(0.95 0.004 250);">
+<td style="padding:11px 14px; font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250); white-space:nowrap;">(A-105) WHITE DRILL 56</td>
+<td style="padding:11px 14px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); background:oklch(0.96 0.004 250); border-radius:6px; padding:4px 8px; white-space:nowrap;">▤ 17, 31, 45, 45</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">32</td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.42 0.12 155); background:oklch(0.95 0.04 155); border-radius:6px; padding:3px 8px;">11</span></td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.5 0.16 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:3px 8px;">21</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">4,180</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">12,530.00</td></tr><tr style="border-bottom:1px solid oklch(0.95 0.004 250);">
+<td style="padding:11px 14px; font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250); white-space:nowrap;">(B-210) 11 KG MICRO PLAIN 54</td>
+<td style="padding:11px 14px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); background:oklch(0.96 0.004 250); border-radius:6px; padding:4px 8px; white-space:nowrap;">▤ 2, 6, 9, 12</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">22</td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.42 0.12 155); background:oklch(0.95 0.04 155); border-radius:6px; padding:3px 8px;">16</span></td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.5 0.16 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:3px 8px;">6</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">3,290</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">9,860.00</td></tr><tr style="border-bottom:1px solid oklch(0.95 0.004 250);">
+<td style="padding:11px 14px; font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250); white-space:nowrap;">(A-106) 9 KG WHITE HB ROTO 52</td>
+<td style="padding:11px 14px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); background:oklch(0.96 0.004 250); border-radius:6px; padding:4px 8px; white-space:nowrap;">▤ 22, 27, 32-34</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">24</td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.42 0.12 155); background:oklch(0.95 0.04 155); border-radius:6px; padding:3px 8px;">2</span></td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.5 0.16 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:3px 8px;">22</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">4,310</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">12,940.00</td></tr><tr style="border-bottom:1px solid oklch(0.95 0.004 250);">
+<td style="padding:11px 14px; font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250); white-space:nowrap;">(C-320) 96/56 MICRO 54</td>
+<td style="padding:11px 14px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); background:oklch(0.96 0.004 250); border-radius:6px; padding:4px 8px; white-space:nowrap;">▤ 1, 4, 4, 7-8, 11, 13, 13</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">34</td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.42 0.12 155); background:oklch(0.95 0.04 155); border-radius:6px; padding:3px 8px;">19</span></td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.5 0.16 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:3px 8px;">15</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">4,770</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">14,300.00</td></tr><tr style="border-bottom:1px solid oklch(0.95 0.004 250);">
+<td style="padding:11px 14px; font-size:12.5px; font-weight:500; color:oklch(0.28 0.02 250); white-space:nowrap;">(C-321) 96/60 MICRO 60</td>
+<td style="padding:11px 14px;"><span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:oklch(0.45 0.02 250); background:oklch(0.96 0.004 250); border-radius:6px; padding:4px 8px; white-space:nowrap;">▤ 3, 3, 10, 15</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">21</td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.42 0.12 155); background:oklch(0.95 0.04 155); border-radius:6px; padding:3px 8px;">3</span></td>
+<td style="padding:11px 14px; text-align:right;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:oklch(0.5 0.16 25); background:oklch(0.96 0.03 25); border-radius:6px; padding:3px 8px;">18</span></td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">2,660</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.65 0.015 250);">0</td>
+<td style="padding:11px 14px; text-align:right; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:oklch(0.3 0.02 250);">7,990.00</td></tr></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: MOBILE -->
+  <div style="max-width:1240px; margin:0 auto; padding:clamp(44px,6vw,80px) clamp(20px,4vw,40px); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:64px; align-items:center;">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.6 0.02 250);">Mobile</div>
+      <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,3.2vw,36px); font-weight:600; letter-spacing:-0.03em; line-height:1.12; text-wrap:pretty;">The whole floor, from anywhere</h2>
+      <p style="margin:0; font-size:16.5px; line-height:1.65; color:oklch(0.46 0.02 250); max-width:460px;">The same data on a phone: totals at the top, lines as tabs, machine cards below. Owners check the mill without calling the supervisor.</p>
+      <div style="display:flex; flex-direction:column; gap:10px; padding-top:8px; font-size:15.5px; color:oklch(0.4 0.02 250);">
+        <div style="display:flex; gap:12px; align-items:center;"><span style="width:5px; height:5px; border-radius:99px; background:oklch(0.45 0.16 250);"></span>Line-by-line efficiency tabs</div>
+        <div style="display:flex; gap:12px; align-items:center;"><span style="width:5px; height:5px; border-radius:99px; background:oklch(0.45 0.16 250);"></span>Same export and TV mode controls</div>
+        <div style="display:flex; gap:12px; align-items:center;"><span style="width:5px; height:5px; border-radius:99px; background:oklch(0.45 0.16 250);"></span>Dark mode for night shifts</div>
+      </div>
+    </div>
+    <div style="justify-self:center; width:100%; max-width:328px; box-sizing:border-box; border-radius:40px; background:oklch(0.24 0.02 250); padding:10px; overflow:hidden; box-shadow:0 30px 70px -34px oklch(0.3 0.06 250 / 0.5);">
+      <div style="border-radius:31px; background:oklch(0.975 0.004 250); overflow:hidden; width:100%; max-width:100%; box-sizing:border-box; display:flex; flex-direction:column; font-family:'Outfit',sans-serif;">
+
+        <div style="padding:12px 14px 10px; background:oklch(1 0 0); border-bottom:1px solid oklch(0.93 0.006 250); display:flex; align-items:center; gap:8px; flex:none;">
+          <div style="display:flex; flex-direction:column; gap:3.5px; padding:6px 4px;">
+            <span style="width:15px; height:1.8px; background:oklch(0.4 0.02 250); border-radius:2px;"></span>
+            <span style="width:15px; height:1.8px; background:oklch(0.4 0.02 250); border-radius:2px;"></span>
+            <span style="width:15px; height:1.8px; background:oklch(0.4 0.02 250); border-radius:2px;"></span>
+          </div>
+          <div style="width:26px; height:26px; border-radius:8px; border:1px solid oklch(0.9 0.006 250); display:flex; align-items:center; justify-content:center; color:oklch(0.45 0.02 250); font-size:13px;">‹</div>
+          <div style="font-size:12.5px; font-weight:500; color:oklch(0.3 0.02 250); background:oklch(0.96 0.004 250); border-radius:8px; padding:5px 11px;">Machines</div>
+          <div style="flex:1;"></div>
+          <div style="width:26px; height:26px; display:flex; align-items:center; justify-content:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.02 250)" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+          </div>
+          <div style="display:flex; align-items:center; gap:5px;">
+            <div style="width:26px; height:26px; border-radius:8px; background:oklch(0.85 0.16 92); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:12.5px; font-weight:600; color:oklch(0.28 0.06 80);">N</div>
+            <span style="font-size:10px; color:oklch(0.55 0.02 250);">▾</span>
+          </div>
+        </div>
+
+        <div style="padding:12px; display:flex; flex-direction:column; gap:10px;">
+
+          <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:14px; padding:11px; display:flex; flex-direction:column; gap:7px; flex:none;">
+            <div style="background:oklch(0.95 0.05 160); border-radius:9px; padding:8px 11px; display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.44 0.1 160);">Total mtrs</span>
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.34 0.1 160);">10,531</span>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:7px; flex:none;">
+              <div style="background:oklch(0.96 0.05 155); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.46 0.1 155);">Running</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.36 0.1 155);">29</span>
+              </div>
+              <div style="background:oklch(0.96 0.04 330); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.5 0.13 330);">Low eff</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.42 0.15 330);">16</span>
+              </div>
+              <div style="background:oklch(0.96 0.05 85); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.5 0.11 75);">Poor eff</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.42 0.12 70);">9</span>
+              </div>
+              <div style="background:oklch(0.96 0.04 40); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.52 0.14 35);">Problem</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.44 0.16 32);">1</span>
+              </div>
+              <div style="background:oklch(0.955 0.045 25); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.52 0.16 25);">Fault</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.44 0.18 25);">1</span>
+              </div>
+              <div style="background:oklch(0.95 0.045 250); border-radius:9px; padding:7px 10px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.48 0.14 255);">Manual</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:oklch(0.4 0.16 255);">3</span>
+              </div>
+            </div>
+            <div style="background:oklch(0.95 0.04 210); border-radius:9px; padding:8px 11px; display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.46 0.11 215);">Avg eff</span>
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:oklch(0.38 0.13 215);">90%</span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:7px; align-items:center; flex:none;">
+            <div style="flex:1; display:flex; background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:10px; overflow:hidden;">
+              <div style="flex:1; padding:8px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.35 0.03 250); background:oklch(0.96 0.008 250);">Today</div>
+              <div style="flex:1; padding:8px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.6 0.02 250);">24h</div>
+            </div>
+            <div style="width:30px; height:30px; border-radius:9px; border:1px solid oklch(0.93 0.006 250); background:oklch(1 0 0); display:flex; align-items:center; justify-content:center;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.02 250)" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:7px; flex:none;">
+            <div style="background:oklch(0.24 0.02 250); border-radius:10px; padding:9px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.97 0.003 250);">Export all</div>
+            <div style="background:oklch(0.52 0.13 168); border-radius:10px; padding:9px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.99 0.003 250);">TV mode</div>
+          </div>
+
+          <div style="display:flex; gap:7px; overflow:hidden; flex:none;">
+            <div style="display:flex; align-items:center; gap:6px; background:oklch(0.24 0.02 250); border-radius:9px; padding:7px 11px; flex:none;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; color:oklch(0.98 0.003 250);">Line-1</span>
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:600; color:oklch(0.75 0.1 160); background:oklch(0.3 0.03 250); border-radius:5px; padding:1px 5px;">85%</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px; background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:9px; padding:7px 11px; flex:none;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; color:oklch(0.4 0.02 250);">Line-2</span>
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:600; color:oklch(0.48 0.12 160);">96%</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px; background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:9px; padding:7px 11px; flex:none;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; color:oklch(0.4 0.02 250);">Line-3</span>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; flex:none;">
+            <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+              <div style="background:oklch(0.58 0.16 150); padding:6px 9px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#fff;">#1</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 5px;">RUN</span>
+              </div>
+              <div style="padding:9px; display:flex; flex-direction:column; gap:7px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:oklch(0.24 0.02 250); letter-spacing:-0.03em;">168</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:oklch(0.52 0.14 150);">98%</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+                <div style="background:oklch(0.97 0.004 250); border-radius:7px; padding:6px 8px; display:flex; align-items:center; justify-content:space-between;">
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.42 0.02 250);">168m</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.55 0.02 250);">98%</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8px; color:oklch(0.58 0.02 250);"><span>PICK 51</span><span>THR 95%</span></div>
+                <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8px; color:oklch(0.55 0.14 25);"><span>STOPS 4</span><span style="color:oklch(0.58 0.02 250);">709</span></div>
+              </div>
+            </div>
+            <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+              <div style="background:oklch(0.72 0.15 78); padding:6px 9px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#fff;">#2</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.24); border-radius:4px; padding:2px 5px;">POOR</span>
+              </div>
+              <div style="padding:9px; display:flex; flex-direction:column; gap:7px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:oklch(0.24 0.02 250); letter-spacing:-0.03em;">241</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:oklch(0.6 0.14 70);">84%</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:84%; height:100%; background:oklch(0.72 0.15 78);"></div></div>
+                <div style="background:oklch(0.97 0.004 250); border-radius:7px; padding:6px 8px; display:flex; align-items:center; justify-content:space-between;">
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.42 0.02 250);">241m</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; color:oklch(0.55 0.02 250);">84%</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8px; color:oklch(0.58 0.02 250);"><span>PICK 27.5</span><span>THR 95%</span></div>
+                <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:8px; color:oklch(0.55 0.14 25);"><span>STOPS 22</span><span style="color:oklch(0.58 0.02 250);">652</span></div>
+              </div>
+            </div>
+            <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+              <div style="background:oklch(0.5 0.17 262); padding:6px 9px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#fff;">#3</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.24); border-radius:4px; padding:2px 5px;">MAN</span>
+              </div>
+              <div style="padding:9px 9px 4px; display:flex; flex-direction:column; gap:7px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:oklch(0.24 0.02 250); letter-spacing:-0.03em;">164</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:oklch(0.5 0.15 262);">98%</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:98%; height:100%; background:oklch(0.5 0.17 262);"></div></div>
+              </div>
+            </div>
+            <div style="background:oklch(1 0 0); border:1px solid oklch(0.93 0.006 250); border-radius:12px; overflow:hidden;">
+              <div style="background:oklch(0.58 0.16 150); padding:6px 9px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#fff;">#4</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.1em; color:#fff; background:oklch(1 0 0 / 0.22); border-radius:4px; padding:2px 5px;">RUN</span>
+              </div>
+              <div style="padding:9px 9px 4px; display:flex; flex-direction:column; gap:7px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:oklch(0.24 0.02 250); letter-spacing:-0.03em;">233</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; color:oklch(0.52 0.14 150);">97%</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:oklch(0.93 0.006 250); overflow:hidden;"><div style="width:97%; height:100%; background:oklch(0.58 0.16 150);"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="max-width:1240px; margin:0 auto; padding:0 40px 88px;">
+    <div style="border:1px solid oklch(0.88 0.02 250); border-radius:20px; background:oklch(1 0 0); padding:40px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:28px 48px;">
+      <div style="display:flex; flex-direction:column; gap:12px; max-width:540px;">
+        <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(23px,2.8vw,32px); font-weight:600; letter-spacing:-0.03em; line-height:1.14; text-wrap:pretty;">See it running on your own looms.</h2>
+        <p style="margin:0; font-size:16.5px; line-height:1.65; color:oklch(0.46 0.02 250);">We install on a few machines first so you can judge the numbers before committing the floor.</p>
+      </div>
+      <a href="Contact.dc.html" style="font-size:15px; font-weight:500; background:oklch(0.45 0.16 250); color:#fff; padding:14px 26px; border-radius:9px; white-space:nowrap;" style-hover="background:oklch(0.36 0.15 256);">Book a demo</a>
+    </div>
+  </div>
+
+  <dc-import name="Site Footer" hint-size="100%,320px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.fit = () => {
+      [this.f1, this.f2].forEach(el => {
+        if (!el) return;
+        const inner = el.firstElementChild;
+        if (!inner) return;
+        const s = el.clientWidth / 1600;
+        inner.style.transform = "scale(" + s + ")";
+        el.style.height = Math.round(inner.scrollHeight * s) + "px";
+      });
+    };
+    this.countUp();
+    this.ro = new ResizeObserver(this.fit);
+    if (this.f1) this.ro.observe(this.f1);
+    if (this.f2) this.ro.observe(this.f2);
+    this.fit();
+  }
+  countUp() {
+    const els = Array.prototype.slice.call(document.querySelectorAll("[data-count]"));
+    if (!els.length || !window.IntersectionObserver) return;
+    const run = el => {
+      const target = parseFloat(el.getAttribute("data-count"));
+      const suffix = el.getAttribute("data-suffix") || "";
+      const dur = 1100, t0 = performance.now();
+      el.textContent = "0" + suffix;
+      const step = now => {
+        const p = Math.min(1, (now - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * e) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    this.io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) { run(en.target); this.io.unobserve(en.target); }
+      });
+    }, { threshold: 0.6 });
+    els.forEach(el => this.io.observe(el));
+  }
+  componentWillUnmount() { if (this.ro) this.ro.disconnect(); if (this.io) this.io.disconnect(); }
+  renderVals() {
+    return {
+      frame1: el => { this.f1 = el; if (this.fit) this.fit(); },
+      frame2: el => { this.f2 = el; if (this.fit) this.fit(); }
+    };
+  }
+}
+</script>
+</body>
+</html>

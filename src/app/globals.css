@@ -1,0 +1,129 @@
+/* Global styles ported verbatim from the source _source/*.dc.html <helmet> blocks,
+   plus responsive nav rules that replace the original support.js runtime. */
+
+/* Fonts are loaded via <link> in layout.tsx so the literal font-family names
+   used in the inline styles ('Outfit', 'Space Grotesk', 'JetBrains Mono') resolve. */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: oklch(0.985 0.004 250);
+  font-family: "Outfit", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: oklch(0.45 0.16 250);
+  text-decoration: none;
+}
+a:hover {
+  color: oklch(0.34 0.14 258);
+}
+
+/* Marquee animations used by the client-logo strips on Home/Services. */
+@keyframes vx-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes vx-marquee-rev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* --- Responsive navigation (replaces the ResizeObserver logic in support.js) ---
+   Desktop links show >= 820px; the hamburger + dropdown panel take over below. */
+.vx-nav-links {
+  display: flex;
+}
+.vx-nav-burger {
+  display: none;
+}
+.vx-nav-panel {
+  display: none;
+}
+.vx-nav-panel[data-open="true"] {
+  display: flex;
+}
+
+@media (max-width: 819px) {
+  .vx-nav-links {
+    display: none;
+  }
+  .vx-nav-burger {
+    display: flex;
+  }
+}
+
+/* Nav/footer hover states (inline styles win over classes, so force with !important
+   — same technique support.js used for style-hover). */
+.vx-navlink:hover {
+  color: oklch(0.45 0.16 250) !important;
+}
+.vx-cta:hover {
+  background: oklch(0.36 0.15 256) !important;
+}
+.vx-burger:hover {
+  border-color: oklch(0.7 0.02 250) !important;
+}
+/* Footer links have no hover in the source; a gentle brighten improves UX. */
+.vx-footlink:hover {
+  color: oklch(0.98 0.003 250) !important;
+}
+
+/* --- Smooth hover transitions -------------------------------------------------
+   Scoped to a/button so the JS-driven transform on the scale-to-fit mockups
+   (which live on <div>s) is never animated. */
+a,
+button {
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+/* --- Scroll-reveal for top-level page sections --------------------------------
+   The hidden state only applies under html.js, which the inline script in
+   layout.tsx sets before first paint — so there's no flash, and no-JS crawlers
+   and users always see fully-visible content. SiteInteractions adds .vx-in as
+   each section scrolls into view. */
+html.js main > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+html.js main > *.vx-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [style*="animation"] {
+    animation: none !important;
+  }
+  a,
+  button {
+    transition: none;
+  }
+  html.js main > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
