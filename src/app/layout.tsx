@@ -84,7 +84,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Render-blocking: marks the document as JS-enabled before first paint so
             the scroll-reveal hidden state applies with no flash (and never hides
