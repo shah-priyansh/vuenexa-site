@@ -1,0 +1,452 @@
+/* =====================================================================
+   VueNexa — Shared Brand Theme (company site unification layer)
+   Loaded AFTER styles.css on index.html / privacy.html / terms.html.
+   Mirrors css/textile.css so the company site and the VueNexa Textile
+   product site read as ONE brand: same tokens, nav, buttons, cards, footer.
+   ===================================================================== */
+
+/* ---------- Design Tokens (identical to textile.css) ---------- */
+:root {
+    --red: #dc2626;
+    --red-dark: #b91c1c;
+    --red-light: #f87171;
+    --navy: #0f172a;
+    --navy-2: #1e293b;
+    --slate: #334155;
+    --slate-2: #475569;
+    --blue: #1d4ed8;
+    --blue-deep: #1e3a8a;
+    --blue-light: #60a5fa;
+    --green: #22c55e;
+    --green-2: #10b981;
+
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
+    --bg-soft-2: #f1f5f9;
+    --text: #0f172a;
+    --text-2: #475569;
+    --text-3: #64748b;
+    --muted: #94a3b8;
+    --border: #e2e8f0;
+
+    --grad-brand: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 55%, #dc2626 100%);
+    --grad-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 999px;
+
+    --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+    --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 28px 64px rgba(15, 23, 42, 0.16);
+    --shadow-red: 0 10px 30px rgba(220, 38, 38, 0.28);
+
+    --container: 1200px;
+    --nav-h: 76px;
+}
+
+body { -webkit-font-smoothing: antialiased; }
+
+/* =====================================================================
+   NAVBAR  (unified — matches textile .nav exactly)
+   Company markup switches from .navbar to .nav / .nav-inner
+   ===================================================================== */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--nav-h);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+    text-decoration: none;
+}
+.brand-mark {
+    width: 38px; height: 38px;
+    border-radius: 11px;
+    background: var(--grad-brand);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 1.05rem;
+    box-shadow: var(--shadow-sm);
+    flex: none;
+}
+.brand b { color: var(--red); font-weight: 800; }
+.brand small { display: block; font-size: 0.62rem; letter-spacing: 0.14em; color: var(--muted); font-weight: 600; text-transform: uppercase; }
+.brand-text { line-height: 1.05; }
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: auto;
+    list-style: none;
+}
+.nav-menu .nav-link {
+    font-size: 0.96rem;
+    font-weight: 500;
+    color: var(--slate);
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.16s ease;
+    text-decoration: none;
+}
+.nav-menu .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 0; height: 2px;
+    background: var(--red);
+    transition: width 0.2s ease;
+}
+.nav-menu .nav-link:hover, .nav-menu .nav-link.active { color: var(--navy); }
+.nav-menu .nav-link:hover::after, .nav-menu .nav-link.active::after { width: 100%; }
+
+.nav-right { display: flex; align-items: center; gap: 1.1rem; }
+.nav-cta { padding: 0.62rem 1.3rem; font-size: 0.92rem; }
+
+/* hamburger (X animation on .active — toggled by common.js) */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: 0; }
+.hamburger .bar { width: 24px; height: 2px; background: var(--navy); border-radius: 2px; margin: 0; transition: 0.25s; }
+.hamburger.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active .bar:nth-child(2) { opacity: 0; }
+.hamburger.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* =====================================================================
+   BUTTONS  (unified pills — override styles.css .btn / .btn-primary / .btn-secondary)
+   ===================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.9rem 1.6rem;
+    border-radius: var(--radius-pill);
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    overflow: visible;
+}
+.btn-primary {
+    background: var(--red);
+    color: #fff;
+    box-shadow: var(--shadow-red);
+    border-color: var(--red);
+}
+.btn-primary:hover { transform: translateY(-2px); background: var(--red-dark); border-color: var(--red-dark); box-shadow: 0 14px 34px rgba(220, 38, 38, 0.36); }
+.btn-primary::before { display: none; } /* neutralize old sweep */
+
+.btn-secondary {
+    background: transparent;
+    color: var(--navy);
+    border-color: var(--border);
+}
+.btn-secondary:hover { border-color: var(--navy); color: var(--navy); transform: translateY(-2px); background: transparent; box-shadow: none; }
+.btn-secondary::before { display: none; }
+
+/* On the dark hero, keep the outline button readable */
+.hero .btn-secondary { color: #e2e8f0; border-color: rgba(255, 255, 255, 0.28); }
+.hero .btn-secondary:hover { color: #fff; border-color: #fff; background: rgba(255, 255, 255, 0.08); }
+
+/* =====================================================================
+   SECTION HEADERS  (harmonize with textile .section-head)
+   ===================================================================== */
+.section-title {
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+.section-subtitle {
+    font-size: 1.08rem;
+    color: var(--text-2);
+    max-width: 640px;
+    margin: 0.9rem auto 0;
+}
+
+/* =====================================================================
+   HERO TAGLINE  (retone off-brand orange -> brand red pill)
+   ===================================================================== */
+.hero .hero-tagline {
+    color: #fecaca;
+    background: rgba(220, 38, 38, 0.14);
+    border: 1px solid rgba(220, 38, 38, 0.32);
+    padding: 0.45rem 0.95rem;
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: none;
+}
+.hero .highlight { color: var(--blue-light); }
+.hero .highlight::after { background: var(--blue-light); }
+
+/* =====================================================================
+   CARDS  (unified radius / shadow / gradient icons — override company)
+   ===================================================================== */
+.service-card {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    padding: 2rem 1.6rem;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.service-card::before { display: none; }
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: transparent; }
+.service-card:hover .service-icon { transform: none; box-shadow: var(--shadow-sm); }
+.service-card:hover .service-icon::before { display: none; }
+.service-icon {
+    width: 54px; height: 54px;
+    border-radius: 14px;
+    background: var(--grad-brand);
+    box-shadow: var(--shadow-sm);
+    margin: 0 0 1.1rem 0;
+    font-size: 1.4rem;
+}
+.service-icon::before { display: none; }
+.service-title { font-size: 1.15rem; font-weight: 700; color: var(--navy); text-align: left; }
+.service-description { color: var(--text-2); font-size: 0.95rem; text-align: left; }
+
+.stat-card {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--red);
+}
+.stat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--red); }
+.stat-number { color: var(--navy); font-weight: 800; }
+
+.about-features .feature-card {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    text-align: left;
+    padding: 1.8rem 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.about-features .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: transparent; }
+.about-features .feature-icon {
+    width: 54px; height: 54px;
+    border-radius: 14px;
+    background: var(--grad-brand);
+    border: 0;
+    color: #fff;
+    margin: 0 0 1.1rem 0;
+    font-size: 1.3rem;
+}
+.about-features .feature-card:hover .feature-icon { background: var(--grad-brand); color: #fff; }
+.about-features .feature-card h4 { color: var(--navy); }
+.about-features .feature-card p { color: var(--text-2); }
+
+/* Contact icons -> gradient rounded squares */
+.contact-item i {
+    background: var(--grad-brand);
+    border-radius: 13px;
+    box-shadow: var(--shadow-sm);
+}
+.contact-item h4 { color: var(--navy); }
+.contact-form { border-radius: var(--radius-lg); box-shadow: var(--shadow); border: 1px solid var(--border); }
+.form-group input, .form-group textarea {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-soft);
+    box-shadow: none;
+}
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+    background: #fff;
+    transform: none;
+}
+
+/* =====================================================================
+   FOOTER  (unified 4-col — override company footer)
+   ===================================================================== */
+.footer { background: var(--navy); color: #cbd5e1; padding: 4rem 0 2rem; }
+.footer .container { max-width: var(--container); }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 2.5rem; text-align: left; margin-bottom: 0; }
+.footer-brand .brand { color: #fff; margin-bottom: 1rem; }
+.footer-brand .brand small { color: var(--muted); }
+.footer-brand p { font-size: 0.92rem; color: #94a3b8; max-width: 300px; margin: 0; }
+.footer-social { display: flex; gap: 0.7rem; margin-top: 1.3rem; justify-content: flex-start; }
+.footer-social a { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: rgba(255, 255, 255, 0.06); color: #cbd5e1; transition: 0.18s; text-decoration: none; }
+.footer-social a:hover { background: var(--red); color: #fff; transform: translateY(-2px); }
+.footer-col h5 { color: #fff; font-size: 0.95rem; margin-bottom: 1.1rem; font-weight: 700; }
+.footer-col a { display: block; font-size: 0.9rem; color: #94a3b8; padding: 0.35rem 0; transition: color 0.16s ease; text-decoration: none; }
+.footer-col a:hover { color: #fff; }
+.footer-col .fc-line { display: flex; gap: 0.6rem; font-size: 0.9rem; color: #94a3b8; padding: 0.35rem 0; }
+.footer-col .fc-line i { color: var(--red-light); margin-top: 0.2rem; }
+.footer-bottom {
+    margin-top: 3rem; padding-top: 1.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    font-size: 0.85rem; color: var(--muted); text-align: left;
+}
+.footer-bottom .footer-links { gap: 1.2rem; }
+.footer-bottom .footer-link { color: var(--muted); padding: 0; }
+.footer-bottom .footer-link:hover { color: #fff; text-decoration: none; }
+
+/* =====================================================================
+   CONTACT SECTION  (upgraded two-panel layout)
+   ===================================================================== */
+.contact .section-header { margin-bottom: 3rem; }
+.contact-content {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2.2rem;
+    align-items: stretch;
+    margin-top: 0;
+}
+
+/* Branded info panel */
+.contact-panel {
+    background: var(--grad-dark);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: 2.4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+.contact-panel::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+        radial-gradient(420px 220px at 90% 0%, rgba(29, 78, 216, 0.35), transparent 60%),
+        radial-gradient(360px 220px at 0% 100%, rgba(220, 38, 38, 0.22), transparent 60%);
+    pointer-events: none;
+}
+.contact-panel > * { position: relative; z-index: 1; }
+.contact-panel-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em; line-height: 1.22; color: #fff; }
+.contact-panel-sub { color: #cbd5e1; margin-top: 0.6rem; font-size: 0.98rem; }
+.contact-methods { margin: 1.8rem 0; display: grid; gap: 0.7rem; }
+.cmethod {
+    display: flex; align-items: center; gap: 0.9rem;
+    padding: 0.7rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    transition: background 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+.cmethod:not(.cmethod--static):hover { background: rgba(255, 255, 255, 0.09); transform: translateX(3px); border-color: rgba(255, 255, 255, 0.18); }
+.cmethod-ic {
+    width: 44px; height: 44px; flex: none;
+    border-radius: 12px;
+    display: grid; place-items: center;
+    background: var(--grad-brand);
+    color: #fff; font-size: 1.05rem;
+    box-shadow: var(--shadow-sm);
+}
+.contact-content > * { min-width: 0; }
+.cmethod { min-width: 0; }
+.cmethod-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.cmethod-text b { overflow-wrap: anywhere; }
+.cmethod-text small { color: #94a3b8; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.cmethod-text b { font-size: 0.98rem; font-weight: 600; color: #fff; }
+.contact-panel-foot {
+    margin-top: auto; padding-top: 1.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+}
+.cpf-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: #cbd5e1; }
+.cpf-badge .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18); animation: cpfPulse 1.6s infinite; }
+@keyframes cpfPulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.35); } }
+.contact-panel-social { display: flex; gap: 0.5rem; }
+.contact-panel-social a { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: rgba(255, 255, 255, 0.06); color: #cbd5e1; text-decoration: none; transition: 0.18s; }
+.contact-panel-social a:hover { background: var(--red); color: #fff; transform: translateY(-2px); }
+
+/* Form: labels + 2-col row */
+.contact-form { padding: 2.2rem; display: flex; flex-direction: column; }
+.contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.contact-form .form-row .form-group { margin-bottom: 1.1rem; }
+.contact-form .form-group { margin-bottom: 1.1rem; }
+.contact-form label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--slate); margin-bottom: 0.4rem; }
+.btn-block { width: 100%; }
+.form-privacy-note { margin-top: 0.9rem; font-size: 0.8rem; color: var(--text-3); text-align: center; }
+
+/* Don't flag empty required fields as errors on load — only once the user has typed */
+.contact-form input:invalid, .contact-form textarea:invalid {
+    border-color: var(--border);
+    box-shadow: none;
+}
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--red-light);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+/* =====================================================================
+   LEGAL PAGES  (privacy / terms polish)
+   ===================================================================== */
+.legal-content { padding-top: 3.5rem; }
+.legal-header h1 { color: var(--navy); letter-spacing: -0.02em; }
+.legal-section h2 { color: var(--navy); }
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media (max-width: 820px) {
+    .nav-menu {
+        position: fixed;
+        top: var(--nav-h); left: -100%; right: auto;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #fff;
+        padding: 0.5rem 0;
+        border-top: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        transition: left 0.28s ease;
+        margin-left: 0;
+    }
+    .nav-menu.active { left: 0; }
+    .nav-menu li { width: 100%; }
+    .nav-menu .nav-link { display: block; padding: 0.9rem 24px; }
+    .nav-menu .nav-link::after { display: none; }
+    .hamburger { display: flex; }
+    .nav-cta { padding: 0.5rem 1rem; font-size: 0.85rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .contact-content { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .contact-form .form-row { grid-template-columns: 1fr; }
+    .contact-panel-foot { flex-direction: column; align-items: flex-start; }
+    .contact-panel, .contact-form { padding: 1.6rem; }
+}
