@@ -3,12 +3,8 @@
 /.pnp
 .pnp.js
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
+# build output
+/dist
 
 # generated (produced by scripts/convert.mjs at pre(dev|build))
 /src/generated/
@@ -27,4 +23,3 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts

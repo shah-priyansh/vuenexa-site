@@ -1,21 +1,36 @@
 # VueNexa Enterprise — Website
 
-The VueNexa marketing site, converted to **Next.js (App Router, TypeScript)** with a
-faithful, pixel-for-pixel port of the original design, full responsive behavior, and
-production-grade SEO.
+The VueNexa marketing site, built with **Vite + React (TypeScript)** and pre-rendered
+to fully static HTML via **[vite-react-ssg](https://github.com/Daydreamer-riri/vite-react-ssg)** —
+a faithful, pixel-for-pixel port of the original design, full responsive behavior, and
+production-grade SEO. **No server runs in production** — the output is a plain static
+`dist/` you deploy to any CDN or static host.
 
 ## Quick start
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
-npm run build      # production build (static export of all pages)
-npm run start      # serve the production build
+npm run dev        # http://localhost:5173
+npm run build      # static build -> dist/ (all pages pre-rendered)
+npm run preview    # serve the production build locally
 ```
 
 `predev` / `prebuild` automatically run the content conversion step (see below).
+`postbuild` writes `dist/sitemap.xml` and `dist/robots.txt`.
 
-## How the conversion works
+## Architecture
+
+Every route is **pre-rendered to its own static HTML file at build time** (SEO-complete),
+then hydrated on the client for interactions. Routing is `react-router-dom`; per-page
+`<head>` tags come from `vite-react-ssg`'s `Head` component.
+
+- `index.html` — the shared shell: fonts, the JS-enabled reveal script, site-wide
+  `robots` meta, and `Organization` + `WebSite` JSON-LD.
+- `src/main.tsx` — the `ViteReactSSG` entry (imports global CSS, mounts `routes`).
+- `src/routes.tsx` — the route table (root `Layout` + 8 pages).
+- `src/pages/*` — one thin component per route (`<PageHead>` + `<PageShell>`).
+
+## How the content conversion works
 
 The original site was exported from a no-code tool as `_source/*.dc.html` — ~500KB of
 intricate inline styles (`oklch()` colors, `clamp()` fluid sizing, three Google fonts).
@@ -23,47 +38,60 @@ To preserve it exactly:
 
 - **`scripts/convert.mjs`** parses each source page and emits React-consumable content
   modules into `src/generated/` (gitignored, rebuilt on every dev/build). For each page it:
-  - keeps the page's *middle* markup as raw HTML (injected server-side via
-    `dangerouslySetInnerHTML`, so crawlers get fully-formed content),
+  - keeps the page's *middle* markup as raw HTML (injected via `dangerouslySetInnerHTML`,
+    and because it's pre-rendered, crawlers get fully-formed content),
   - converts every `style-hover="…"` into a scoped `.vx-hN:hover{ …!important }` rule
     (`src/generated/hover.css`) — the same technique the original runtime used,
   - rewrites internal `*.dc.html` links to clean routes (`/services`, `/products`, …),
   - tags the scale-to-fit device mockups with `data-scale-frame`.
-- **Nav and Footer are hand-written React components** (`src/components/`) for clean,
-  idiomatic markup and a real responsive hamburger menu.
-- **`SiteInteractions`** ports the original client behaviors: scroll-triggered count-up
-  stats and the scale-to-fit dashboard mockups (with `prefers-reduced-motion` support).
+- **Nav and Footer are hand-written React components** (`src/components/`) with a real
+  responsive hamburger menu; links use `react-router` for client-side navigation.
+- **`SiteInteractions`** ports the original client behaviors — scroll reveal, count-up
+  stats, and scale-to-fit dashboard mockups (with `prefers-reduced-motion` support),
+  re-running on route change via `useLocation()`.
 
 Because the page bodies are the original markup rendered verbatim, the result is
 visually identical to the source.
 
 ## SEO
 
-- Per-page metadata (title, description, canonical, Open Graph, Twitter) via the
-  App Router **Metadata API** — `src/lib/seo.ts`.
-- **JSON-LD** structured data (`Organization` + `WebSite`) in the root layout.
-- `app/sitemap.ts`, `app/robots.ts`, dynamic `app/opengraph-image.tsx` (1200×630),
-  and an SVG favicon (`app/icon.svg`).
+- Per-page tags (title, description, canonical, Open Graph, Twitter) via the
+  **`PageHead`** component (`src/components/PageHead.tsx`), driven by the shared copy in
+  **`src/lib/seo.ts`**.
+- Site-wide **JSON-LD** (`Organization` + `WebSite`) and `robots` meta in `index.html`.
+- **`scripts/seo-files.mjs`** (postbuild) writes `sitemap.xml` + `robots.txt`.
+- **`scripts/og.mjs`** generates the static `public/og.png` social image (1200×630);
+  run `npm run og` to regenerate. SVG favicon at `public/icon.svg`.
 - All absolute URLs derive from **one place** — `src/lib/site.ts`
-  (`NEXT_PUBLIC_SITE_URL`, defaulting to `https://vuenexa.com`).
+  (`VITE_SITE_URL`, defaulting to `https://vuenexa.com`).
 
 ## Project structure
 
 ```
-_source/                 # original *.dc.html exports (reference only, not shipped)
-scripts/convert.mjs      # HTML → generated content modules
+index.html               # shared shell: fonts, JSON-LD, robots, reveal script
+vite.config.ts           # Vite + @/ alias + vite-react-ssg (ssgOptions)
+_source/                  # original *.dc.html exports (reference only, not shipped)
+scripts/
+  convert.mjs            # HTML → generated content modules
+  seo-files.mjs          # postbuild: sitemap.xml + robots.txt
+  og.mjs                 # one-off: public/og.png
 src/
-  app/
-    layout.tsx           # fonts, global metadata, JSON-LD
-    page.tsx             # / (Home)
-    <route>/page.tsx     # services, products, work, insights, contact, privacy, terms
-    sitemap.ts, robots.ts, opengraph-image.tsx, icon.svg, globals.css
-  components/            # SiteNav, SiteFooter, Logo, PageShell, SiteInteractions
-  generated/            # AUTO-GENERATED by convert.mjs (gitignored)
-  lib/                  # site config + SEO helpers
+  main.tsx               # ViteReactSSG entry
+  routes.tsx             # route table (Layout + 8 pages)
+  Layout.tsx             # routed <Outlet/>
+  globals.css            # global styles (moved from the old app/)
+  pages/                 # one component per route
+  components/            # SiteNav, SiteFooter, Logo, PageShell, PageHead, SiteInteractions
+  generated/             # AUTO-GENERATED by convert.mjs (gitignored)
+  lib/                   # site config + SEO copy
 ```
+
+## Deployment
+
+`npm run build` produces a static `dist/`. Upload it to any static host / CDN
+(Vercel static, Netlify, S3+CloudFront, GitHub Pages, …). There is no Node server to run.
 
 ## Changing the domain
 
-Set `NEXT_PUBLIC_SITE_URL` (e.g. in `.env.local` or on Vercel) — canonical URLs,
+Set `VITE_SITE_URL` (e.g. in `.env.local` or your host's env) — canonical URLs,
 sitemap, robots, and Open Graph tags all follow.

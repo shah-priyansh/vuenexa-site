@@ -4,7 +4,7 @@
  * (or one env var).
  */
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://vuenexa.com"
+  import.meta.env.VITE_SITE_URL || "https://vuenexa.com"
 ).replace(/\/$/, "");
 
 export const siteConfig = {

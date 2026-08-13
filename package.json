@@ -2,24 +2,30 @@
   "name": "vuenexa-web",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "convert": "node scripts/convert.mjs",
     "predev": "node scripts/convert.mjs",
+    "dev": "vite-react-ssg dev",
     "prebuild": "node scripts/convert.mjs",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "vite-react-ssg build",
+    "postbuild": "node scripts/seo-files.mjs",
+    "preview": "vite preview",
+    "og": "node scripts/og.mjs"
   },
   "dependencies": {
-    "next": "15.5.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-router-dom": "^6.30.4",
+    "vite-react-ssg": "^0.9.2"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "typescript": "^5"
+    "@vitejs/plugin-react": "^5.0.3",
+    "typescript": "^5",
+    "vite": "^7.3.6"
   }
 }

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import type { CSSProperties } from "react";
 import { Logo } from "./Logo";
 import { siteConfig } from "@/lib/site";
@@ -86,32 +86,32 @@ export function SiteFooter() {
 
         <div style={colStyle}>
           <div style={headStyle}>Company</div>
-          <Link className="vx-footlink" href="/services" style={linkStyle}>
+          <Link className="vx-footlink" to="/services" style={linkStyle}>
             Services
           </Link>
-          <Link className="vx-footlink" href="/products" style={linkStyle}>
+          <Link className="vx-footlink" to="/products" style={linkStyle}>
             Products
           </Link>
-          <Link className="vx-footlink" href="/work" style={linkStyle}>
+          <Link className="vx-footlink" to="/work" style={linkStyle}>
             Work
           </Link>
-          <Link className="vx-footlink" href="/insights" style={linkStyle}>
+          <Link className="vx-footlink" to="/insights" style={linkStyle}>
             Insights
           </Link>
         </div>
 
         <div style={colStyle}>
           <div style={headStyle}>Product</div>
-          <Link className="vx-footlink" href="/products" style={linkStyle}>
+          <Link className="vx-footlink" to="/products" style={linkStyle}>
             Loom monitoring
           </Link>
-          <Link className="vx-footlink" href="/products" style={linkStyle}>
+          <Link className="vx-footlink" to="/products" style={linkStyle}>
             Production dashboard
           </Link>
-          <Link className="vx-footlink" href="/products" style={linkStyle}>
+          <Link className="vx-footlink" to="/products" style={linkStyle}>
             Mobile app
           </Link>
-          <Link className="vx-footlink" href="/contact" style={linkStyle}>
+          <Link className="vx-footlink" to="/contact" style={linkStyle}>
             Request a demo
           </Link>
         </div>
@@ -135,10 +135,10 @@ export function SiteFooter() {
           <span>
             {siteConfig.address.city}, {siteConfig.address.region}
           </span>
-          <Link className="vx-footlink" href="/terms" style={linkStyle}>
+          <Link className="vx-footlink" to="/terms" style={linkStyle}>
             Terms of Service
           </Link>
-          <Link className="vx-footlink" href="/privacy" style={linkStyle}>
+          <Link className="vx-footlink" to="/privacy" style={linkStyle}>
             Privacy Policy
           </Link>
         </div>

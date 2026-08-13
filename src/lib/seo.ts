@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { absoluteUrl, siteConfig } from "./site";
+import { siteConfig } from "./site";
 
 type PageSeo = {
   title: string;
@@ -85,28 +84,3 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "The terms governing use of vuenexa.com and the services, software, and products supplied by VueNexa Enterprise.",
   },
 };
-
-/** Build a Next.js Metadata object (canonical + Open Graph + Twitter) for a page. */
-export function buildMetadata(key: keyof typeof PAGE_SEO): Metadata {
-  const seo = PAGE_SEO[key];
-  const url = absoluteUrl(seo.path);
-  return {
-    title: seo.absoluteTitle ? { absolute: seo.title } : seo.title,
-    description: seo.description,
-    keywords: seo.keywords,
-    alternates: { canonical: seo.path },
-    openGraph: {
-      type: "website",
-      url,
-      siteName: siteConfig.name,
-      title: seo.absoluteTitle ? seo.title : `${seo.title} | ${siteConfig.name}`,
-      description: seo.description,
-      locale: siteConfig.locale,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: seo.absoluteTitle ? seo.title : `${seo.title} | ${siteConfig.name}`,
-      description: seo.description,
-    },
-  };
-}

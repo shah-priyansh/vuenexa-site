@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
 type NavItem = { label: string; href: string; key: string };
@@ -50,7 +48,7 @@ export function SiteNav({ active = "" }: { active?: string }) {
         }}
       >
         <Link
-          href="/"
+          to="/"
           style={{
             display: "flex",
             alignItems: "center",
@@ -96,7 +94,7 @@ export function SiteNav({ active = "" }: { active?: string }) {
             return (
               <Link
                 key={item.key}
-                href={item.href}
+                to={item.href}
                 aria-current={isActive ? "page" : undefined}
                 className="vx-navlink"
                 style={{
@@ -111,7 +109,7 @@ export function SiteNav({ active = "" }: { active?: string }) {
             );
           })}
           <Link
-            href="/contact"
+            to="/contact"
             className="vx-cta"
             style={{
               fontSize: 14,
@@ -167,7 +165,7 @@ export function SiteNav({ active = "" }: { active?: string }) {
         {NAV_ITEMS.map((item) => (
           <Link
             key={item.key}
-            href={item.href}
+            to={item.href}
             onClick={() => setOpen(false)}
             style={{
               fontSize: 16,
@@ -181,7 +179,7 @@ export function SiteNav({ active = "" }: { active?: string }) {
           </Link>
         ))}
         <Link
-          href="/contact"
+          to="/contact"
           onClick={() => setOpen(false)}
           style={{
             marginTop: 14,

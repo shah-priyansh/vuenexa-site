@@ -1,7 +1,5 @@
-"use client";
-
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useLocation } from "react-router-dom";
 
 /**
  * Client-side behaviors ported from the source support.js runtime:
@@ -15,7 +13,7 @@ import { usePathname } from "next/navigation";
  * because it keys off the pathname.
  */
 export function SiteInteractions() {
-  const pathname = usePathname();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const cleanups: Array<() => void> = [];
